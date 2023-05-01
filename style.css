@@ -1,0 +1,109 @@
+ 
+/*==== Carousel ==== */
+.carousel {
+  position: relative;
+  height: 600px;
+  width: 80%;
+  margin: 0 auto;
+  background-color: pink;
+}
+
+
+.car1, .car2, .car3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+
+.car1 {
+  display: grid;
+  grid-template: 1fr / 1fr;
+  place-items: center;
+  background-color: rgb(255, 215, 221);
+  z-index: 3;
+}
+
+.car2 {
+  display: grid;
+  grid-template: 1fr / 1fr;
+  place-items: center;
+  background-color: rgb(140, 232, 255);
+  z-index: 2;
+}
+
+.car3 {
+  display: grid;
+  grid-template: 1fr / 1fr;
+  place-items: center;
+  background-color: rgb(251, 210, 132);
+  z-index: 1;
+}
+
+p1 {
+  font-size: 40px;
+  text-align: center;
+  color: rgb(159, 0, 0);
+}
+
+img {
+  position: relative;
+  width: 300px;
+}
+
+/* ==== Buttons ==== */
+.enterBtn, .startBtn {
+  color: rgb(159, 0, 0);
+  background-color: white;
+}
+
+.enterBtn:hover, .startBtn:hover {
+  background-color: rgb(159, 0, 0);
+  color: white;
+}
+
+.redArmyBtn:hover {
+background-color: rgb(159, 0, 0);
+}
+
+.blueArmyBtn:hover {
+  background-color: rgb(0, 0, 147);
+}
+
+
+/* ==== KINGDOM SCREEN ==== */
+.board2 {
+  width: 250px;
+  display: flexbox;
+  position: relative;
+}
+
+.redArmy, .blueArmy {
+  width: 60px;
+  height: 60px;
+  position: relative;  
+}
+
+/* ==== GAME SCREEN ==== */
+.chess-board {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.chess-board th {
+  padding: .5em;
+}
+
+.chess-board td {
+  border: 1px solid;
+  width: 2em;
+  height: 2em;
+}
+
+.chess-board .light {
+  background-color: white;
+}
+
+.chess-board .dark {
+  background-color: black;
+}
