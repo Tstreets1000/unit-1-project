@@ -53,12 +53,12 @@ img {
 }
 
 /* ==== Buttons ==== */
-.enterBtn, .startBtn {
+.enterBtn, .startBtn, .playAgainBtn {
   color: rgb(159, 0, 0);
   background-color: white;
 }
 
-.enterBtn:hover, .startBtn:hover {
+.enterBtn:hover, .startBtn:hover, .playAgainBtn:hover {
   background-color: rgb(159, 0, 0);
   color: white;
 }
@@ -67,25 +67,12 @@ img {
   background-color: rgb(159, 0, 0);
 }
 
-/*
-.redArmyBtn:active {
-  background-color: rgb(159, 0, 0);
-}
-*/
-
 .blueArmyBtn:hover {
   background-color: rgb(2, 2, 135);
 }
 
-.slides {
-  display: flex;
-  transition: transform 0.5s;
-  transform: translateX(calc(-100% * var(--current-slide)));
-}
 
-.slide {
-  flex: 0 0 100%;
-}
+
 
 
 
