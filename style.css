@@ -22,6 +22,7 @@
   place-items: center;
   background-color: rgb(255, 215, 221);
   z-index: 3;
+  
 }
 
 .car2 {
@@ -63,12 +64,31 @@ img {
 }
 
 .redArmyBtn:hover {
-background-color: rgb(159, 0, 0);
+  background-color: rgb(159, 0, 0);
 }
 
-.blueArmyBtn:hover {
-  background-color: rgb(0, 0, 147);
+/*
+.redArmyBtn:active {
+  background-color: rgb(159, 0, 0);
 }
+*/
+
+.blueArmyBtn:hover {
+  background-color: rgb(2, 2, 135);
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s;
+  transform: translateX(calc(-100% * var(--current-slide)));
+}
+
+.slide {
+  flex: 0 0 100%;
+}
+
+
+
 
 
 /* ==== KINGDOM SCREEN ==== */
