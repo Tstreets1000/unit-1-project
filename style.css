@@ -103,14 +103,24 @@ img {
 
 .chess-board td {
   border: 1px solid;
-  width: 2em;
-  height: 2em;
+  width: 80px;
+  height: 80px;
 }
 
 .chess-board .light {
-  background-color: white;
+  background-color: white; 
 }
 
 .chess-board .dark {
   background-color: black;
+}
+
+#rRook, #rKnight, #rBishop, #rQueen, #rKing, #rPawn {
+  color:rgb(159, 0, 0);
+  font-size: 50px;
+}
+
+#bRook, #bKnight, #bBishop, #bQueen, #bKing, #bPawn {
+  color:rgb(29, 81, 252);
+  font-size: 50px;
 }
