@@ -7,9 +7,9 @@
 
 
 
-
-
 /*----- state variables -----*/
+
+
 
 
 
@@ -18,7 +18,7 @@
 
 
 
-/*----- event listeners -----*/
+/*----- (BUTTONS) event listeners -----*/
 // When I click the ENTER button, screen should roll over to Kingdom screen/ next screen.
 document.querySelector('.enterBtn').addEventListener('click', event => {
   document.querySelector('.car1').style.display='none' 
@@ -45,9 +45,28 @@ document.querySelector('.blueArmyBtn').addEventListener('click', event => {
   document.querySelector('.redArmyBtn').style.backgroundColor='white' 
 })
 
- /*----- functions -----*/
+/*----- (CHESS PIECES) Movement Statements -----*/
 
-const start = function(event) {
+// ROOKS - Can move lateral and horizontal across all 8 squares//
+ //document.getElementById("rRook").innerHTML('click', event => {
+  
+ //})
 
-}
 
+// KNIGHTS - Can move in L-shape; total of 4 squares from starting point//
+
+
+
+// BISHOPS - Can move on diagonal across 8 squares//
+
+
+
+// QUEENS - Can move any direction; across all 8 squares//
+
+
+
+// KINGS - Can move any direction; one square at a time//
+
+
+
+// PAWNS - Can move forward to advance; Intial movement of 2 squares, then 1 after. Captures opposing piece only diagonally./

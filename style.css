@@ -2,7 +2,7 @@
 /*==== Carousel ==== */
 .carousel {
   position: relative;
-  height: 600px;
+  height: 800px;
   width: 80%;
   margin: 0 auto;
   background-color: pink;
@@ -52,6 +52,7 @@ img {
   width: 300px;
 }
 
+
 /* ==== Buttons ==== */
 .enterBtn, .startBtn, .playAgainBtn {
   color: rgb(159, 0, 0);
@@ -72,12 +73,6 @@ img {
 }
 
 
-
-
-
-
-
-
 /* ==== KINGDOM SCREEN ==== */
 .board2 {
   width: 250px;
@@ -90,6 +85,9 @@ img {
   height: 60px;
   position: relative;  
 }
+
+
+
 
 /* ==== GAME SCREEN ==== */
 .chess-board {
@@ -105,6 +103,7 @@ img {
   border: 1px solid;
   width: 80px;
   height: 80px;
+  
 }
 
 .chess-board .light {
@@ -115,12 +114,23 @@ img {
   background-color: black;
 }
 
-#rRook, #rKnight, #rBishop, #rQueen, #rKing, #rPawn {
-  color:rgb(159, 0, 0);
+#rRook1, #rRook2, #rKnight1, #rKnight2, #rBishop1, #rBishop2, #rQueen, #rKing, #rPawnA, #rPawnB, #rPawnC, #rPawnD, #rPawnE, #rPawnF, #rPawnG, #rPawnH {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  color:rgb(204, 1, 1);
   font-size: 50px;
+  cursor: pointer;
 }
 
-#bRook, #bKnight, #bBishop, #bQueen, #bKing, #bPawn {
+#bRook1, #bRook2, #bKnight1, #bKnight2, #bBishop1, #bBishop2, #bQueen, #bKing, #bPawnA, #bPawnB, #bPawnC, #bPawnD, #bPawnE, #bPawnF, #bPawnG, #bPawnH {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
   color:rgb(29, 81, 252);
   font-size: 50px;
+  cursor: pointer;  
 }
+
