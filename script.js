@@ -18,7 +18,7 @@
 
 
 
-/*----- (BUTTONS) event listeners -----*/
+/* ===== (BUTTONS) EVENT LISTENERS ===== */
 // When I click the ENTER button, screen should roll over to Kingdom screen/ next screen.
 document.querySelector('.enterBtn').addEventListener('click', event => {
   document.querySelector('.car1').style.display='none' 
@@ -44,6 +44,15 @@ document.querySelector('.blueArmyBtn').addEventListener('click', event => {
   document.querySelector('.blueArmyBtn').style.backgroundColor='#020287' 
   document.querySelector('.redArmyBtn').style.backgroundColor='white' 
 })
+
+/* ===== (CHESS PIECES) EVENT LISTENERS ===== */
+document.getElementById('bPawnA').addEventListener('click', event => {
+  const movement = true
+    if (movement) {
+      
+    }
+})
+
 
 /*----- (CHESS PIECES) Movement Statements -----*/
 
