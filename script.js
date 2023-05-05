@@ -1,4 +1,5 @@
-
+/* ===== Constant Variables ===== */
+const squareSelect = [a1, a2, a3, a4, a5, a6, a7, a8, b1, b2, b3, b4, b5, b6, b7, b8]
 
 
 /*-----objects-------*/
@@ -45,13 +46,12 @@ document.querySelector('.blueArmyBtn').addEventListener('click', event => {
   document.querySelector('.redArmyBtn').style.backgroundColor='white' 
 })
 
-/* ===== (CHESS PIECES) EVENT LISTENERS ===== */
-document.getElementById('bPawnA').addEventListener('click', event => {
-  const movement = true
-    if (movement) {
-      
-    }
-})
+/* ===== (CHESS PIECES) EVENT LISTENERS ===== (example code found on techiedelight.com)===== */ 
+document.getElementById('bPawnA').draggable = function() {
+  const pieceMove = document.getElementById('bPawnA')
+  pieceMove.appendChild(document.getElementById('a3'))
+  document.getElementById('bPawnA').draggable('a3') 
+}
 
 
 /*----- (CHESS PIECES) Movement Statements -----*/
