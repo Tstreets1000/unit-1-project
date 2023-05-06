@@ -35,11 +35,16 @@ const RED_ARMY = {
   'red army': 'rRook2'
 }
 
-class Player {
-  constructor() {
-    this.name = 'name'
-    this.armyColor = 'color'
+const player = {
+  '1': {
+    name: '',
+    color: 'redArmy'
+  },
+  '2': {
+    name: '',
+    color: 'blueArmy'
   }
+
 }
 
 /*----- cached elements  -----*/
@@ -48,6 +53,11 @@ const startBtn = document.querySelector('button')
 const playAgainBtn = document.querySelector('button')
 const redArmyBtn = document.querySelector('button')
 const blueArmyBtn = document.querySelector('button')
+
+// Check for Winner //
+// const winner = capturedKing();
+  //if (winner) return `winner is ${Red} || ${Blue} {
+//}
 
 
 /* ===== (BUTTONS) EVENT LISTENERS ===== */
@@ -62,7 +72,8 @@ document.querySelector('.startBtn').addEventListener('click', start => {
 })
 
 // When I click the PLAY AGAIN button, screen should roll back to Battlefield screen/ next screen.
-document.querySelector('.playAgainBtn').addEventListener('click', init => {
+document.querySelector('.playAgainBtn').addEventListener('click', event => {
+  playAgainBtn.addEventListener('click', init())
 })
 
 // When redArmy button is selected; stay highlighted, assign player 1 & default blue army player 2
@@ -120,7 +131,5 @@ document.getElementById("bPawnA").draggable = function() {
 // QUEENS - Can move any direction; across all 8 squares//
 // KINGS - Can move any direction; one square at a time//
 // PAWNS - Can move forward to advance; Intial movement of 2 squares, then 1 after. Captures opposing piece on diagonal left/right./
-
-
 
 
