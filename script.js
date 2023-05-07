@@ -1,5 +1,5 @@
 /* ===== Constant Variables ===== */
-const BLUE_ARMY = {
+const BLUE_ARMY_PIECES = {
   'blue army': 'bPawnA', 
   'blue army': 'bPawnB', 
   'blue army': 'bPawnC', 
@@ -17,7 +17,7 @@ const BLUE_ARMY = {
   'blue army': 'bRook2'
 }  
 
-const RED_ARMY = {
+const RED_ARMY_PIECES = {
   'red army': 'rPawnA', 
   'red army': 'rPawnB', 
   'red army': 'rPawnC', 
@@ -35,17 +35,20 @@ const RED_ARMY = {
   'red army': 'rRook2'
 }
 
-const player = {
-  '1': {
-    name: '',
-    color: 'redArmy'
-  },
-  '2': {
-    name: '',
-    color: 'blueArmy'
-  }
+const player1 = true
+const player2 = true
 
-}
+/*
+// Player 1 & Player 2 assigned to teams //
+function assignPlayer1() 
+  if (RED_ARMY_PIECES = player1) {
+    } else (BLUE_ARMY_PIECES = player2)
+
+function assignPlayer2()
+  if (BLUE_ARMY_PIECES = player2) {
+    } else (RED_ARMY_PIECES = player1)
+*/
+ 
 
 /*----- cached elements  -----*/
 const enterBtn = document.querySelector('button')
@@ -54,11 +57,11 @@ const playAgainBtn = document.querySelector('button')
 const redArmyBtn = document.querySelector('button')
 const blueArmyBtn = document.querySelector('button')
 
+/*
 // Check for Winner //
-// const winner = capturedKing();
-  //if (winner) return `winner is ${Red} || ${Blue} {
-//}
-
+ const winner = capturedKing();
+  if (winner) return `winner is ${Red} || winner is ${Blue}` 
+*/
 
 /* ===== (BUTTONS) EVENT LISTENERS ===== */
 // When I click the ENTER button, screen should roll over to Kingdom screen/ next screen.
@@ -76,7 +79,7 @@ document.querySelector('.playAgainBtn').addEventListener('click', event => {
   playAgainBtn.addEventListener('click', init())
 })
 
-// When redArmy button is selected; stay highlighted, assign player 1 & default blue army player 2
+// When redArmy button is selected; stay highlighted.
 document.querySelector('.redArmyBtn').addEventListener('click', event => {
   document.querySelector('.redArmyBtn').style.backgroundColor='#9F0000' 
   document.querySelector('.blueArmyBtn').style.backgroundColor='white'
@@ -85,7 +88,7 @@ document.querySelector('.redArmyBtn').addEventListener('click', event => {
   alert("Player 1: Red Army")
 })
 
-// When blueArmy button is selected; stay highlighted, assign player 1 & default red army player 2
+// When blueArmy button is selected; stay highlighted.
 document.querySelector('.blueArmyBtn').addEventListener('click', event => {
   document.querySelector('.blueArmyBtn').style.backgroundColor='#020287' 
   document.querySelector('.redArmyBtn').style.backgroundColor='white'
@@ -96,8 +99,9 @@ document.querySelector('.blueArmyBtn').addEventListener('click', event => {
 
 /* ===== FUNCTIONS ===== */
 function render() {
-  assignPlayer()
   renderBoard()
+  assignPlayer1()
+  assignPlayer2()
   renderMessage()
   renderControls()
 }
@@ -121,7 +125,6 @@ document.getElementById("bPawnA").draggable = function() {
   pieceMove.appendChild(document.getElementById("bPawnA"))
   document.getElementById('a4').appendChild(pieceMove)   
 }
-
 
 /*----- (CHESS PIECES) Movement Statements -----*/
 
