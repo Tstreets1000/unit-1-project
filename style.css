@@ -95,6 +95,26 @@ p1 {
   height: 180px;
 }
 
+/* RED ARMY MODAL ON TEAM SELECTION SCREEN 
+.redModal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+}
+
+.modalContent {
+  background-color: black;
+  border: 1px, solid, black;
+  color: rgb(195, 0, 0);
+}
+
+.closePopUp {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+*/
+
 /* ==== GAME SCREEN ==== */
 .chessBoard {
   border: 2px solid black;
