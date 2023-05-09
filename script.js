@@ -10,52 +10,52 @@ const BLUE_ARMY_PIECES = {
       
   }, 
   "bPawnB": {
-    "column": "B",
-    "type": "pawn",
-    "color": "blue",
-    "piece": "&#9817;", 
+      "column": "B",
+      "type": "pawn",
+      "color": "blue",
+      "piece": "&#9817;", 
       
   },
   "bPawnC": {
-    "column": "C",
-    "type": "pawn",
-    "color": "blue",
-    "piece": "&#9817;", 
+      "column": "C",
+      "type": "pawn",
+      "color": "blue",
+      "piece": "&#9817;", 
   },
 
   "bPawnD": {
-    "column": "D",
-    "type": "pawn",
-    "color": "blue",
-    "piece": "&#9817;", 
+      "column": "D",
+      "type": "pawn",
+      "color": "blue",
+      "piece": "&#9817;", 
   },
 
   "bPawnE": {
-    "column": "E",
-    "type": "pawn",
-    "color": "blue",
-    "piece": "&#9817;", 
+      "column": "E",
+      "type": "pawn",
+      "color": "blue",
+      "piece": "&#9817;", 
   },
 
   "bPawnF": {
-    "column": "F",
-    "type": "pawn",
-    "color": "blue",
-    "piece": "&#9817;", 
+      "column": "F",
+      "type": "pawn",
+      "color": "blue",
+      "piece": "&#9817;", 
   },
 
   "bPawnG": {
-    "column": "G",
-    "type": "pawn",
-    "color": "blue",
-    "piece": "&#9817;",
+      "column": "G",
+      "type": "pawn",
+      "color": "blue",
+      "piece": "&#9817;",
   },
 
   "bPawnH": {
-    "column": "H",
-    "type": "pawn",
-    "color": "blue",
-    "piece": "&#9817;",
+      "column": "H",
+      "type": "pawn",
+      "color": "blue",
+      "piece": "&#9817;",
   },
 
   'bQueen': {
