@@ -238,45 +238,151 @@ const RED_ARMY_BTN= document.querySelector('button')
 const BLUE_ARMY_BTN = document.querySelector('button')
 const PLAYER1 = true
 const PLAYER2 = true
-const PAWN_MOVEMENT = {}
-const ROOK_MOVEMENT = {}
-const KNIGHT_MOVEMENT = {}
-const BISHOP_MOVEMENT = {}
-const KING_MOVEMENT = {}
-const QUEEN_MOVEMENT = {}
+const SQUARES_ALL = [] // ARRAY TO HOLD ALL POSITIONS ON BOARD 
+const PAWNS_ALL = [] // ARRAY TO HOLD ALL PAWNS 
+const ROOKS_ALL = [] // ARRAY TO HOLD ALL ROOKS 
+const KNIGHTS_ALL = [] // ARRAY TO HOLD ALL KNIGHTS 
+const BISHOPS_ALL = [] // ARRAY TO ALL BISHOPS 
+const KINGS_ALL = [] // ARRAY TO HOLD ALL KINGS
+const QUEENS_ALL = [] // ARRAY TO HOLD ALL QUEENS
 
+const SQUARES = document.querySelectorAll(".box")
+  SQUARES.forEach((div) => {
+    SQUARES_ALL.push(div)
+  })
+
+const PAWNS = document.querySelectorAll(".pawn")
+  PAWNS.forEach((div) => {
+    PAWNS_ALL.push(div)
+  })
+
+const ROOKS = document.querySelectorAll(".rook")
+  ROOKS.forEach((div) => {
+  ROOKS_ALL.push(div)
+  })
+
+const KNIGHTS = document.querySelectorAll(".knight")  
+  KNIGHTS.forEach((div) => {
+    KNIGHTS_ALL.push(div)
+  })
+
+const BISHOPS = document.querySelectorAll(".bishop") 
+  BISHOPS.forEach((div) => {
+    BISHOPS_ALL.push(div)
+  })
+
+const KINGS = document.querySelectorAll(".king")
+  KINGS.forEach((div) => {
+    KINGS_ALL.push(div)
+  }) 
+
+const QUEENS =document.querySelectorAll(".queen")
+  QUEENS.forEach((div) => {
+    QUEENS_ALL.push(div)
+  })  
 
 //======================================================================================//
-//========================= (BUTTONS) EVENT LISTENERS ================================= //
+//========================= EVENT LISTENERS ================================= //
 //=======================================================================================//
 
-//==== CAROUSEL BUTTON FOR SCREEN #1 ======//
+//==== CAROUSEL ENTER BUTTON FOR SCREEN #1 ======//
 document.querySelector('.enterBtn').addEventListener('click', enter => {
   document.querySelector('.car1').style.display='none' 
 })
 
-//===== CAROUSEL BUTTON FOR SCREEN #2 =======//
+//===== CAROUSEL - START BUTTON FOR SCREEN #2 =======//
 document.querySelector('.startBtn').addEventListener('click', start => {
   document.querySelector('.car2').style.display='none'
 })
 
-//====== CAROUSEL BUTTON FOR SCREEN #3 =====//
+//====== CAROUSEL - PLAY AGAIN BUTTON FOR SCREEN #3 =====//
 document.querySelector('.playAgainBtn').addEventListener('click', event => {
-  document.querySelector('.car3').style.display='none'
+  document.querySelector('.car2').style.display='grid'
 })
 
+//====== CAROUSEL - EXIT GAME BUTTON FOR SCREEN #3 =====//
+document.querySelector('.exitGameBtn').addEventListener('click', event => {
+  document.querySelector('.car1').style.display='grid'
+})
+
+//====== TIMER - RESET CLOCK BUTTON FOR SCREEN #3 =====//
+/*document.querySelector('.timer_startBtn').addEventListener('click', event => {
+  function timer_startBtn
+})
+*/
 
 // ===== INITIALIZE FUNCTIONS ===== //
-function render() {
-  renderBoard()
-  assignPlayer1()
-  assignPlayer2()
-  renderMessage()
-  renderControls()
+function init_red() {
+  renderBoard,
+  assignPlayer1,
+  assignPlayer2,
+  renderMessage,
+  renderControls
+}
+
+function init_blue() {
+  renderBoard,
+  asignPlayer1,
+  assignPlayer2,
+  renderMessage,
+  renderControls
 }
 //========================================//
 //==========TIMER FUNCTIONS==============//
 //=======================================//
+
+//=== Time warning below 30 seconds - Change timer numbers to yellow ====//
+
+//=== START TIMER ===// 
+const START_TIMER = ('.timer_StartBtn')
+let player1 = 60
+let player2 = 60
+let currentPlayer = 1
+let intervalId 
+
+const UPDATE_PLAYER1_TIMER = () => {
+  document.querySelector('.clock1').textContent = player1
+}
+
+const UPDATE_PLAYER2_TIMER = () => {
+  document.querySelector('.clock2').textContent = player2
+}
+//=== START TIMER ===//
+const START_INTERVAL = () => {
+  intervalId = setInterval(() => {
+    if (currentPlayer === 1) {
+          UPDATE_PLAYER1_TIMER()
+    if (player1 === 0) {
+        clearInterval(intervalId)  
+    } else {
+        UPDATE_PLAYER2_TIMER()
+    if (player2 === 0) {
+        clearInterval(intervalId)
+        }  
+      }
+    }
+    START_INTERVAL()
+  })
+}
+  
+//=== SWAP TIMER ===//
+const TIMER_SWAP = () => {
+  if (!playing) return
+    currentPlayer = currentPlayer === 1 ? 2 : 1
+}
+
+  //===TIMER WARNING ===//
+const TIME_WARNING = () => {
+  if (min < 0 && sec <= 10) {
+    if (player1 === 1) {
+      document.querySelector('.clock').style.color = '#FF0000'
+    } 
+  if (min < 0 && sec <= 10)
+    if (player2 === 1) {
+      document.querySelector('.clock').style.color = '#FF0000'
+    }
+  }
+}
 
 
 
@@ -295,7 +401,7 @@ document.querySelector('.redArmyBtn').addEventListener('click', () => {
 })
 
 function init_red() {
-  board = [
+  renderBoard = [
     ['#bRook1', '#bKnight1', '#bBishop1', '#bQueen', '#bKing', '#bBishop2', '#bBishop2', '#bRook2'], // col 8
     ['#bPawnA', '#bPawnB', '#bPawnC', '#bPawnD', '#bPawnE', '#bPawnF', '#bPawnG', '#bPawnH'], // col 7
     [null, null, null, null, null, null, null, null], // col 6
@@ -306,7 +412,7 @@ function init_red() {
     ['#rPawnA', '#rPawnB', '#rPawnC', '#rPawnD', '#rPawnE', '#rPawnF', '#rPawnG', '#rPawnH'], // col 1
     // rowA, rowB, rowC, rowD, rowE, rowF, rowG, rowH 
   ]
-  render()
+  init_red()
 }
 
 // ==============================================================================================================================//
@@ -321,7 +427,7 @@ document.querySelector('.blueArmyBtn').addEventListener('click', () => {
 })
 
 function init_blue() {
-  board = [
+  renderBoard = [
     ['#rRook1', '#rKnight1', '#rBishop1', '#rQueen', '#rKing', '#rBishop2', '#rBishop2', '#rRook2'], // col 8
     ['#rPawnA', '#rPawnB', '#rPawnC', '#rPawnD', '#rPawnE', '#rPawnF', '#rPawnG', '#rPawnH'], // col 7
     [null, null, null, null, null, null, null, null], // col 6
@@ -332,7 +438,7 @@ function init_blue() {
     ['#bPawnA', '#bPawnB', '#bPawnC', '#bPawnD', '#bPawnE', '#bPawnF', '#bPawnG', '#bPawnH'], // col 1
     // rowA, rowB, rowC, rowD, rowE, rowF, rowG, rowH
   ]
-  render()
+  init_blue()
   }
 //==========================================================================================//
 // ===== (CHESS PIECES) EVENT LISTENERS ===== (example code found on techiedelight.com)=====//

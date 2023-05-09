@@ -54,13 +54,43 @@ p1 {
 
 
 /* ==== Buttons ==== */
-.enterBtn, .startBtn, .playAgainBtn {
+.player1, .player2 {
+  font-size: 20px;
+  color: black;
+}
+
+.enterBtn {
   color: rgb(159, 0, 0);
   background-color: white;
   margin-bottom: 300px;
-  margin-top: -100px;
+  margin-top: 50px;
+  font-size: 40px;
+}
+
+.startBtn {
+  color: rgb(159, 0, 0);
+  background-color: white;
+  margin-bottom: 300px;
+  margin-top: 50px;
+  font-size: 40px;
+}
+
+.playAgainBtn {
+  color: rgb(159, 0, 0);
+  background-color: white;
+  margin-top: -350px;
+  margin-right: 245px;
   font-size: 20px;
 }
+
+.exitGameBtn {
+  color: white;
+  background-color: rgb(159, 0, 0);
+  margin-top: -350px;
+  margin-left: 225px;;
+  font-size: 20px;
+}
+
 
 .enterBtn:hover, .startBtn:hover, .playAgainBtn:hover, .timer_StartBtn:hover {
   background-color: rgb(159, 0, 0);
@@ -69,7 +99,7 @@ p1 {
   
 }
 
-.timer_ResetBtn:hover {
+.timer_ResetBtn:hover, .exitGameBtn:hover {
   color:rgb(159, 0, 0);
   background-color: white;
   font-weight: bold;
