@@ -12,112 +12,127 @@
 
 <body>
   <div class="carousel">
-
+    <!-- Carousel #1 -->
     <div class="car1">
       <p1>Many things which nature makes difficult become easy to the man who uses his brains.
        -----------Hannibal Barca</p1>
       <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/622830/capsule_616x353.jpg?t=1666992983" class="battleChessLogo"> 
       <p1>CHESS === WAR</p1>
-      <button class="enterBtn">ENTER</button> 
+      <button class="enterBtn" type="button">ENTER</button> 
     </div>
    
+    <!-- Carousel #2 -->
     <div class="car2">      
       <p1>Kingdom Screen</p1> 
-
       <button class="redArmyBtn"><img src="https://m.media-amazon.com/images/I/91Fh5m9B5uL._AC_SL1500_.jpg" class="redArmy"></button> 
-      <button class="blueArmyBtn"><img src="https://m.media-amazon.com/images/I/91cljL2YTwL._AC_SL1500_.jpg" class="blueArmy"></button>
-
-      <!-- Install Modal for pop up window after team selection
-      <div id="redArmyModal" class="redModal"></div>
-        <div class="modalContent">
-          <span class="closePopUp">CLOSE</span>
-          <P>"Player 1 has been promoted to General of the Red Army!"</P>
-        </div> -->
-
-      <button class="startBtn">START</button>
+      <button class="blueArmyBtn"><img src="https://m.media-amazon.com/images/I/91cljL2YTwL._AC_SL1500_.jpg" class="blueArmy"></button>      
+      <button class="startBtn" type="button">START</button>
     </div>
     
+    <!-- Carousel #3 -->
     <div class="car3">
-      <div class="gridTop">A B C D E F G H</div>      
+      <!-- <div class="gridTop">A B C D E F G H</div> --->
+      
+      <!-- Player 1 Timer -->
+      <div class="player">
+
+        <div class="player__tile palyer-1">
+          <div class="player__digits">
+            <span id="min1">3</span>:<span id="sec1">00</span>
+          </div>
+        </div>
+        <!-- Player 2 Timer -->
+        <div class="player__tile palyer-2">
+          <div class="player__digits">
+            <span id="min2">3</span>:<span id="sec2">00</span>
+          </div>
+        </div>
+        <!-- Timer Buttons -->
+      </div> 
+      <div class="timerBtns">
+        <button class="timer_StartBtn" type="button">START</button>
+        <button class="timer_ResetBtn" type="button">RESET</button>
+        
+      </div>     
 
       <div class="chessBoard">
         <!-- Row 8 -->            
-        <div id="rRook1" class="light"><span class="redArmy">&#9814;</span></div>
-        <div id="rKnight1" class="dark"><span class="redArmy">&#9816;</span></div>
-        <div id="rBishop1" class="light"><span class="redArmy">&#9815;</span></div>
-        <div id="rQueen" class="dark"><span class="redArmy">&#9813;</span></div>
-        <div id="rKing" class="light"><span class="redArmy">&#9812;</span></div>
-        <div id="rBishop2" class="dark"><span class="redArmy">&#9815;</span></div>
-        <div id="rKnight2" class="light"><span class="redArmy">&#9816;</span></div>
-        <div id="rRook2" class="dark"><span class="redArmy">&#9814;</span></div>
+        <div draggable="true" type="rook" id="rRook1 A08" class="light redArmy"><span>&#9814;</span></div>
+        <div draggable="true" type="knight" id="rKnight1 B08" class="dark redArmy"><span>&#9816;</span></div>
+        <div draggable="true" type="bishop" id="rBishop1 C08" class="light redArmy"><span>&#9815;</span></div>
+        <div draggable="true" type="queen" id="rQueen D08" class="dark redArmy"><span>&#9813;</span></div>
+        <div draggable="true" type="king" id="rKing E08" class="light redArmy"><span>&#9812;</span></div>
+        <div draggable="true" type="bishop" id="rBishop2 F08" class="dark redArmy"><span>&#9815;</span></div>
+        <div draggable="true" type="knight" id="rKnight2 G08" class="light redArmy"><span>&#9816;</span></div>
+        <div draggable="true" type="rook" id="rRook2 H08" class="dark redArmy"><span>&#9814;</span></div>
         <!-- Row 7 -->      
-        <div draggable="true" id="rPawnA" class="dark"><span class="redArmy">&#9817;</span></div>
-        <div draggable="true" id="rPawnB" class="light"><span class="redArmy">&#9817;</span></div>
-        <div draggable="true" id="rPawnC" class="dark"><span class="redArmy">&#9817;</span></div>
-        <div draggable="true" id="rPawnD" class="light"><span class="redArmy">&#9817;</span></div>
-        <div draggable="true" id="rPawnE" class="dark"><span class="redArmy">&#9817;</span></div>
-        <div draggable="true" id="rPawnF" class="light"><span class="redArmy">&#9817;</span></div>
-        <div draggable="true" id="rPawnG" class="dark"><span class="redArmy">&#9817;</span></div>
-        <div draggable="true" id="rPawnH" class="light"><span class="redArmy">&#9817;</span></div>
+        <div draggable="true" type="pawn" id="rPawnA A07" class="dark redArmy"><span>&#9817;</span></div>
+        <div draggable="true" type="pawn" id="rPawnB B07" class="light redArmy"><span>&#9817;</span></div>
+        <div draggable="true" type="pawn" id="rPawnC C07" class="dark redArmy"><span>&#9817;</span></div>
+        <div draggable="true" type="pawn" id="rPawnD D07" class="light redArmy"><span>&#9817;</span></div>
+        <div draggable="true" type="pawn" id="rPawnE E07" class="dark redArmy"><span>&#9817;</span></div>
+        <div draggable="true" type="pawn" id="rPawnF F07" class="light redArmy"><span>&#9817;</span></div>
+        <div draggable="true" type="pawn" id="rPawnG G07" class="dark redArmy"><span>&#9817;</span></div>
+        <div draggable="true" type="pawn" id="rPawnH H07" class="light redArmy"><span>&#9817;</span></div>
         <!-- Row 6 -->
-        <div class="light" class="dropzone"></div>
-        <div class="dark"></div>
-        <div class="light"></div>
-        <div class="dark"></div>
-        <div class="light"></div>
-        <div class="dark"></div>
-        <div class="light"></div>
-        <div class="dark"></div>
+        <div id="A06" class="light" class="dropzone"></div>
+        <div id="B06" class="dark"></div>
+        <div id="C06" class="light"></div>
+        <div id="D06" class="dark"></div>
+        <div id="E06" class="light"></div>
+        <div id="F06" class="dark"></div>
+        <div id="G06" class="light"></div>
+        <div id="H06" class="dark"></div>
         <!-- Row 5 -->
-        <div class="dark"></div>
-        <div class="light"></div>
-        <div class="dark"></div>
-        <div class="light"></div>
-        <div class="dark"></div>
-        <div class="light"></div>
-        <div class="dark"></div>
-        <div class="light"></div>
+        <div id="A05" class="dark"></div>
+        <div id="B05" class="light"></div>
+        <div id="C05" class="dark"></div>
+        <div id="D05" class="light"></div>
+        <div id="E05" class="dark"></div>
+        <div id="F05" class="light"></div>
+        <div id="G05" class="dark"></div>
+        <div id="H05" class="light"></div>
         <!-- Row 4 -->
-        <div class="light"></div>
-        <div class="dark"></div>
-        <div class="light"></div>
-        <div class="dark"></div>
-        <div class="light"></div>
-        <div class="dark"></div>
-        <div class="light"></div>
-        <div class="dark"></div>
+        <div id="A04" class="light"></div>
+        <div id="B04" class="dark"></div>
+        <div id="C04" class="light"></div>
+        <div id="D04" class="dark"></div>
+        <div id="E04" class="light"></div>
+        <div id="F04" class="dark"></div>
+        <div id="G04" class="light"></div>
+        <div id="H04" class="dark"></div>
         <!-- Row 3 --> 
-        <div class="dark"></div>
-        <div class="light"></div>
-        <div class="dark"></div>
-        <div class="light"></div>
-        <div class="dark"></div>
-        <div class="light"></div>
-        <div class="dark"></div>
-        <div class="light"></div>
+        <div id="A03" class="dark"></div>
+        <div id="B03" class="light"></div>
+        <div id="C03" class="dark"></div>
+        <div id="D03" class="light"></div>
+        <div id="E03" class="dark"></div>
+        <div id="F03" class="light"></div>
+        <div id="G03" class="dark"></div>
+        <div id="H03" class="light"></div>
         <!-- Row 2 -->
-        <div id="bPawnA" class="light"><span class="blueArmy">&#9817;</span></div>
-        <div id="bPawnB" class="dark"><span class="blueArmy">&#9817;</span></div>
-        <div id="bPawnC" class="light"><span class="blueArmy">&#9817;</span></div>
-        <div id="bPawnD" class="dark"><span class="blueArmy">&#9817;</span></div>
-        <div id="bPawnE" class="light"><span class="blueArmy">&#9817;</span></div>
-        <div id="bPawnF" class="dark"><span class="blueArmy">&#9817;</span></div>
-        <div id="bPawnG" class="light"><span class="blueArmy">&#9817;</span></div>
-        <div id="bPawnH" class="dark"><span class="blueArmy">&#9817;</span></div>
+        <div draggable="true" type="pawn" id="bPawnA A02" class="light blueArmy"><span>&#9817;</span></div>
+        <div draggable="true" type="pawn" id="bPawnB B02" class="dark blueArmy"><span>&#9817;</span></div>
+        <div draggable="true" type="pawn" id="bPawnC C02" class="light blueArmy"><span>&#9817;</span></div>
+        <div draggable="true" type="pawn" id="bPawnD D02" class="dark blueArmy"><span>&#9817;</span></div>
+        <div draggable="true" type="pawn" id="bPawnE E02" class="light blueArmy"><span>&#9817;</span></div>
+        <div draggable="true" type="pawn" id="bPawnF F02" class="dark blueArmy"><span>&#9817;</span></div>
+        <div draggable="true" type="pawn" id="bPawnG G02" class="light blueArmy"><span>&#9817;</span></div>
+        <div draggable="true" type="pawn" id="bPawnH H02" class="dark blueArmy"><span>&#9817;</span></div>
         <!-- Row 1 -->
-        <div id="bRook1"  class="dark"><span class="blueArmy">&#9814;</span></div>
-        <div id="bKnight1" class="light"><span class="blueArmy">&#9816;</span></div>
-        <div id="bBishop1" class="dark"><span class="blueArmy">&#9815;</span></div>
-        <div id="bQueen" class="light"><span class="blueArmy">&#9813;</span></div>
-        <div id="bKing" class="dark"><span class="blueArmy">&#9812;</span></div>
-        <div id="bBishop2" class="light"><span class="blueArmy">&#9815;</span></div>
-        <div id="bKnight2" class="dark"><span class="blueArmy">&#9816;</span></div>
-        <div id="bRook2" class="light"><span class="blueArmy">&#9814;</span></div> 
+        <div draggable="true" type="rook" id="bRook1 A01"  class="dark blueArmy"><span>&#9814;</span></div>
+        <div draggable="true" type="knight" id="bKnight1 B01" class="light blueArmy"><span>&#9816;</span></div>
+        <div draggable="true" type="bishop" id="bBishop1 C01" class="dark blueArmy"><span>&#9815;</span></div>
+        <div draggable="true" type="queen" id="bQueen D01" class="light blueArmy"><span>&#9813;</span></div>
+        <div draggable="true" type="king" id="bKing E01" class="dark blueArmy"><span>&#9812;</span></div>
+        <div draggable="true" type="bishop" id="bBishop2 F01" class="light blueArmy"><span>&#9815;</span></div>
+        <div draggable="true" type="knight" id="bKnight2 G01" class="dark blueArmy"><span>&#9816;</span></div>
+        <div draggable="true" type="rook" id="bRook2 H01" class="light blueArmy"><span>&#9814;</span></div> 
       </div>
       <div class="gridBottom">A B C D E F G H</div>
       <div class="gridRight">8 7 6 5 4 3 2 1</div>
       <div class="captures">Captured Pieces</div>
-      <button class="playAgainBtn">PLAY AGAIN</button>        
+      <button class="playAgainBtn" type="button">PLAY AGAIN</button>        
     </div>  
   </div>
 </body>

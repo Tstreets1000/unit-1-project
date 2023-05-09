@@ -62,9 +62,18 @@ p1 {
   font-size: 20px;
 }
 
-.enterBtn:hover, .startBtn:hover, .playAgainBtn:hover {
+.enterBtn:hover, .startBtn:hover, .playAgainBtn:hover, .timer_StartBtn:hover {
   background-color: rgb(159, 0, 0);
   color: white;
+  cursor: pointer;
+  
+}
+
+.timer_ResetBtn:hover {
+  color:rgb(159, 0, 0);
+  background-color: white;
+  font-weight: bold;
+  cursor: pointer;
 }
  
 .redArmyBtn:hover {
@@ -75,7 +84,6 @@ p1 {
   background-color: rgb(2, 2, 135);
 }
 
-/* ==== KINGDOM SCREEN ==== */
 .redArmyBtn, .blueArmyBtn {
   width: 450px;
   height: 200px;
@@ -83,6 +91,21 @@ p1 {
 
 .startBtn {
   margin-top: 150px;
+}
+
+.timer_ResetBtn {
+  position: flex;
+  margin-right: 1000px;  
+  margin-top: 150px;
+  color: white;
+  font-size: large;
+  background-color: rgb(159, 0, 0);  
+}
+
+.timer_StartBtn {
+  color: rgb(159, 0, 0);
+  font-weight: bold;
+  font-size: large;
 }
 
 .battleChessLogo {
@@ -95,25 +118,7 @@ p1 {
   height: 180px;
 }
 
-/* RED ARMY MODAL ON TEAM SELECTION SCREEN 
-.redModal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-}
 
-.modalContent {
-  background-color: black;
-  border: 1px, solid, black;
-  color: rgb(195, 0, 0);
-}
-
-.closePopUp {
-  color: white;
-  font-size: 20px;
-  font-weight: bold;
-}
-*/
 
 /* ==== GAME SCREEN ==== */
 .chessBoard {
@@ -168,13 +173,15 @@ p1 {
   justify-content: center;
 }
 
+/*
 .gridTop {
   font-size: 20px;
   letter-spacing: 20px;
   margin-left: 10px;
   margin-top: 60px;
-  margin-bottom: 10px;
+  margin-bottom: -40px;
 }
+*/
 
 .gridBottom {
   font-size: 20px;
@@ -199,6 +206,13 @@ p1 {
   margin-left: 900px;
   margin-bottom: 600px;
   
+}
+
+.player {
+  position: absolute;
+  font-size: 25px;
+  margin-right: 1000px;
+  margin-bottom: 600px;
 }
 
 
