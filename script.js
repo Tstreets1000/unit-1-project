@@ -2,229 +2,230 @@
 // ======= PIECE CLASSES ===== //
 // ==================================//
 const BLUE_ARMY_PIECES = {
-  "bPawnA": {
-      "column": "A",
-      "type": "pawn",
-      "color": "blue",
-      "piece": "&#9817;", 
-      
-  }, 
-  "bPawnB": {
-      "column": "B",
-      "type": "pawn",
-      "color": "blue",
-      "piece": "&#9817;", 
-      
-  },
-  "bPawnC": {
-      "column": "C",
-      "type": "pawn",
-      "color": "blue",
-      "piece": "&#9817;", 
+  bPawnA: {
+      location: "A02",
+      type: "pawn",
+      color: "blue",
+      piece: "&#9817;",    
   },
 
-  "bPawnD": {
-      "column": "D",
-      "type": "pawn",
-      "color": "blue",
-      "piece": "&#9817;", 
+  bPawnB: {
+      location: "B02",
+      type: "pawn",
+      color: "blue",
+      piece: "&#9817;", 
   },
 
-  "bPawnE": {
-      "column": "E",
-      "type": "pawn",
-      "color": "blue",
-      "piece": "&#9817;", 
+  bPawnC: {
+      location: "C02",
+      type: "pawn",
+      color: "blue",
+      piece: "&#9817;", 
   },
 
-  "bPawnF": {
-      "column": "F",
-      "type": "pawn",
-      "color": "blue",
-      "piece": "&#9817;", 
+  bPawnD: {
+      location: "D02",
+      type: "pawn",
+      color: "blue",
+      piece: "&#9817;", 
   },
 
-  "bPawnG": {
-      "column": "G",
-      "type": "pawn",
-      "color": "blue",
-      "piece": "&#9817;",
+  bPawnE: {
+      location: "E02",
+      type: "pawn",
+      color: "blue",
+      piece: "&#9817;", 
   },
 
-  "bPawnH": {
-      "column": "H",
-      "type": "pawn",
-      "color": "blue",
-      "piece": "&#9817;",
+  bPawnF: {
+      location: "F02",
+      type: "pawn",
+      color: "blue",
+      piece: "&#9817;", 
   },
 
-  'bQueen': {
-      'column': 'D',
-      'type': 'queen',
-      'color': 'blue',
-      'piece': '&#9813;' 
+  bPawnG: {
+      location: "G02",
+      type: "pawn",
+      color: "blue",
+      piece: "&#9817;",
   },
 
-  "bKing": {
-      "column": "E",
-      "type": "king",
-      "color": "blue",
-      "piece": "&#9812;" 
+  bPawnH: {
+      location: "H02",
+      type: "pawn",
+      color: "blue",
+      piece: "&#9817;",
   },
 
-  "bBishop1": {
-      "column": "F",
-      "type": "bishop",
-      "color": "blue",
-      "piece": "&#9815;", 
+  bQueen: {
+      location: "D01",
+      type: "queen",
+      color: "blue",
+      piece: "&#9813;" 
   },
 
-  "bBishop2": {
-      "column": "C",
-      "type": "bishop",
-      "color": "blue",
-      "piece": "&#9815;" 
+  bKing: {
+      location: "E01",
+      type: "king",
+      color: "blue",
+      piece: "&#9812;" 
   },
 
-  "bKnight1": {
-      "column": "G",
-      "type": "knight",
-      "color": "blue",
-      "piece": "&#9816;" 
+  bBishop1: {
+      column: "C01",
+      type: "bishop",
+      color: "blue",
+      piece: "&#9815;" 
   },
 
-  "bKnight2": {
-      "column": "B",
-      "type": "knight",
-      "color": "blue",
-      "piece": "&#9816;" 
+  bBishop2: {
+      locaiton: "F01",
+      type: "bishop",
+      color: "blue",
+      piece: "&#9815;" 
   },
 
-  "bRook1": {
-      "column": "H",
-      "type": "rook",
-      "color": "blue",
-      "piece": "&#9814;" 
+  bKnight1: {
+      location: "B01",
+      type: "knight",
+      color: "blue",
+      piece: "&#9816;" 
   },
 
-  "bRook2": {
-      "column": "a",
-      "type": "rook",
-      "color": "blue",
-      "piece": "&#9814;" 
+  bKnight2: {
+      location: "G01",
+      type: "knight",
+      color: "blue",
+      piece: "&#9816;" 
+  },
+
+  bRook1: {
+      location: "A01",
+      type: "rook",
+      color: "blue",
+      piece: "&#9814;" 
+  },
+
+  bRook2: {
+      location: "H01",
+      type: "rook",
+      color: "blue",
+      piece: "&#9814;" 
   }
 }  
 
 const RED_ARMY_PIECES = {
-  "rPawnA": {
-      "column": "A",
-      "type": "pawn",
-      "color": "red",
-      "piece": "&#9817;" 
-  }, 
-  "rPawnB": {
-      "column": "B",
-      "type": "pawn",
-      "color": "red",
-      "piece": "&#9817;"  
+  rPawnA: {
+      location: "A07",
+      type: "pawn",
+      color: "red",
+      piece: "&#9817;" 
+  },
+
+  rPawnB: {
+      location: "B07",
+      type: "pawn",
+      color: "red",
+      piece: "&#9817;"  
   },  
   
-  "rPawnC": {
-      "column": "C",
-      "type": "pawn",
-      "color": "red",
-      "piece": "&#9817;"  
+  rPawnC: {
+      location: "C07",
+      type: "pawn",
+      color: "red",
+      piece: "&#9817;"  
   },
   
-  "rPawnD": {
-      "column": "D",
-      "type": "pawn",
-      "color": "red",
-      "piece": "&#9817;"  
+  rPawnD: {
+      location: "D07",
+      type: "pawn",
+      color: "red",
+      piece: "&#9817;"  
   },
   
-  "rPawnE": {
-      "column": "E",
-      "type": "pawn",
-      "color": "red",
-      "piece": "&#9817;"  
+  rPawnE: {
+      location: "E07",
+      type: "pawn",
+      color: "red",
+      piece: "&#9817;"  
   },
   
-  "rPawnF": {
-      "column": "F",
-      "type": "pawn",
-      "color": "red",
-      "piece": "&#9817;"  
+  rPawnF: {
+      location: "F07",
+      type: "pawn",
+      color: "red",
+      piece: "&#9817;"  
   },
   
-  "rPawnG": {
-      "column": "G",
-      "type": "pawn",
-      "color": "red",
-      "piece": "&#9817;"  
+  rPawnG: {
+      location: "G07",
+      type: "pawn",
+      color: "red",
+      piece: "&#9817;"  
   },
   
-  "rPawnH": {
-      "column": "H",
-      "type": "pawn",
-      "color": "red",
-      "piece": "&#9817;"  
+  rPawnH: {
+      location: "H07",
+      type: "pawn",
+      color: "red",
+      piece: "&#9817;"  
   },
   
-  "rQueen": {
-      "column": "D",
-      "type": "queen",
-      "color": "red",
-      "piece": "&#9813;" 
+  rQueen: {
+      location: "D08",
+      type: "queen",
+      color: "red",
+      piece: "&#9813;" 
   },
   
-  "rKing": {
-      "column": "E",
-      "type": "king",
-      "color": "red",
-      "piece": "&#9812;" 
+  rKing: {
+      location: "E08",
+      type: "king",
+      color: "red",
+      piece: "&#9812;" 
   },
   
-  "rBishop1": {
-      "column": "F",
-      "type": "bishop",
-      "color": "red",
-      "piece": "&#9815;" 
+  rBishop1: {
+      location: "C08",
+      type: "bishop",
+      color: "red",
+      piece: "&#9815;" 
   },
   
-  "rBishop2": {
-      "column": "C",
-      "type": "bishop",
-      "color": "red",
-      "piece": "&#9815;" 
+  rBishop2: {
+      location: "F08",
+      type: "bishop",
+      color: "red",
+      piece: "&#9815;" 
   },
   
-  "rKnight1": {
-      "column": "G",
-      "type": "knight",
-      "color": "red",
-      "piece": "&#9816;" 
+  rKnight1: {
+      location: "B08",
+      type: "knight",
+      color: "red",
+      piece: "&#9816;" 
   },  
   
-  "rKnight2": {
-      "column": "B",
-      "type": "knight",
-      "color": "red",
-      "piece": "&#9816;" 
+  rKnight2: {
+      locaiton: "G08",
+      type: "knight",
+      color: "red",
+      piece: "&#9816;" 
   },
   
-  "rRook1": {
-      "column": "H",
-      "type": "rook",
-      "color": "red",
-      "piece": "&#9814;" 
+  rRook1: {
+      location: "A08",
+      type: "rook",
+      color: "red",
+      piece: "&#9814;" 
   },
   
-  "rRook2": {
-      "column": "a",
-      "type": "rook",
-      "color": "red",
-      "piece": "&#9814;" 
+  rRook2: {
+      location: "H08",
+      type: "rook",
+      color: "red",
+      piece: "&#9814;" 
   }
 }
 
@@ -306,10 +307,15 @@ document.querySelector('.exitGameBtn').addEventListener('click', event => {
 })
 
 //====== TIMER - RESET CLOCK BUTTON FOR SCREEN #3 =====//
-/*document.querySelector('.timer_startBtn').addEventListener('click', event => {
+/*document.querySelector('.timer_resetBtn').addEventListener('click', event => {
   function timer_startBtn
 })
 */
+
+//========== Timer - START CLOCK BUTTON FOR SCREEN #3 =======//
+document.querySelector('.timer_StartBtn').addEventListener('click', event => {
+  document.querySelector('.timer_StartBtn') = START_INTERVAL()
+})
 
 // ===== INITIALIZE FUNCTIONS ===== //
 function init_red() {
@@ -334,7 +340,6 @@ function init_blue() {
 //=== Time warning below 30 seconds - Change timer numbers to yellow ====//
 
 //=== START TIMER ===// 
-const START_TIMER = ('.timer_StartBtn')
 let player1 = 60
 let player2 = 60
 let currentPlayer = 1
@@ -360,10 +365,11 @@ const START_INTERVAL = () => {
         clearInterval(intervalId)
         }  
       }
-    }
+    } console.log(START_INTERVAL)
     START_INTERVAL()
   })
 }
+
   
 //=== SWAP TIMER ===//
 const TIMER_SWAP = () => {
@@ -384,17 +390,13 @@ const TIME_WARNING = () => {
   }
 }
 
-
-
-
-
 //==============================================================================================================================//
 //When redArmy button is selected; stay highlighted. Render initialized board with red army on the bottom and blue army on top.//
 //==============================================================================================================================//
 
 document.querySelector('.redArmyBtn').addEventListener('click', () => {
-  document.querySelector('.redArmyBtn').style.backgroundColor='#9F0000' 
-  document.querySelector('.blueArmyBtn').style.backgroundColor='white'
+  //document.querySelector('.redArmyBtn').style.backgroundColor='#9F0000' 
+  //document.querySelector('.blueArmyBtn').style.backgroundColor='white'
   RED_ARMY_BTN.addEventListener('click', function init_red() {
   })
   alert("Player 1: Red Army / Player 2: Blue Army")
@@ -418,6 +420,7 @@ function init_red() {
 // ==============================================================================================================================//
 // When blueArmy button is selected; stay highlighted. Render initialized board with blue army on the bottom and red army on top. //
 // ==============================================================================================================================//
+
 document.querySelector('.blueArmyBtn').addEventListener('click', () => {
   document.querySelector('.blueArmyBtn').style.backgroundColor='#020287' 
   document.querySelector('.redArmyBtn').style.backgroundColor='white'
@@ -440,10 +443,23 @@ function init_blue() {
   ]
   init_blue()
   }
-//==========================================================================================//
-// ===== (CHESS PIECES) EVENT LISTENERS ===== (example code found on techiedelight.com)=====//
-//==========================================================================================// 
+//====================================================//
+// ===== (CHESS PIECES) FUNCTIONS ============//
+//====================================================// 
 
+function allowDrop(ev) {
+  ev.preventDefault()
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData('text', 'move')
+}
+
+function drop(ev) {
+  ev.preventDefault()
+  let data = ev.dataTransfer.getData('text')
+  ev.target.appendChild(document.getElementById(data))
+}
 
 /*----- (CHESS PIECES) DRAG AND DROP Statements -----*/
 
