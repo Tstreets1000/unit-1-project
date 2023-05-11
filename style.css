@@ -106,15 +106,15 @@ p1 {
   cursor: pointer;
 }
  
-.redArmyBtn:hover {
+.blackArmyBtn:hover {
   background-color: rgb(159, 0, 0);
 }
 
-.blueArmyBtn:hover {
+.whiteArmyBtn:hover {
   background-color: rgb(2, 2, 135);
 }
 
-.redArmyBtn, .blueArmyBtn {
+.blackArmyBtn, .whiteArmyBtn {
   width: 450px;
   height: 200px;
 }
@@ -143,12 +143,11 @@ p1 {
   height: 200px;
 }
 
-.redArmy, .blueArmy {
+/*==== Pictures on carousel #2 ==== */
+.blackArmy, .whiteArmy {
   width: 430px;
   height: 180px;
 }
-
-
 
 /* ==== GAME SCREEN ==== */
 .chessBoard {
@@ -183,7 +182,7 @@ p1 {
   background-color: rgba(255, 255, 255, 0.531);
 }
 
-.redArmy {
+.blackArmy {
   color: rgb(183, 10, 10);
   cursor: grab;
   margin-left: auto;
@@ -193,7 +192,7 @@ p1 {
   justify-content: center;
 }
 
-.blueArmy {
+.whiteArmy {
   color: rgb(2, 2, 204);
   cursor: grab;
   margin-left: auto;
@@ -202,16 +201,6 @@ p1 {
   align-items: center;
   justify-content: center;
 }
-
-/*
-.gridTop {
-  font-size: 20px;
-  letter-spacing: 20px;
-  margin-left: 10px;
-  margin-top: 60px;
-  margin-bottom: -40px;
-}
-*/
 
 .gridBottom {
   font-size: 20px;

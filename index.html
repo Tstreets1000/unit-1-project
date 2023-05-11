@@ -8,8 +8,6 @@
   <link rel="icon" href="favicon.png">
   <link rel="stylesheet" href="style.css" type="text/css">  
 </head>
-
-
 <body>
   <div class="carousel">
     <!-- Carousel #1 -->
@@ -24,8 +22,8 @@
     <!-- Carousel #2 -->
     <div class="car2">      
       <p1>Kingdom Screen</p1> 
-      <button class="redArmyBtn"><img src="https://m.media-amazon.com/images/I/91Fh5m9B5uL._AC_SL1500_.jpg" class="redArmy"></button> 
-      <button class="blueArmyBtn"><img src="https://m.media-amazon.com/images/I/91cljL2YTwL._AC_SL1500_.jpg" class="blueArmy"></button>      
+      <button class="blackArmyBtn"><img src="https://m.media-amazon.com/images/I/91Fh5m9B5uL._AC_SL1500_.jpg" class="blackArmy"></button> 
+      <button class="whiteArmyBtn"><img src="https://m.media-amazon.com/images/I/91cljL2YTwL._AC_SL1500_.jpg" class="whiteArmy"></button>      
       <button class="startBtn" type="button">START</button>
     </div>
     
@@ -57,77 +55,77 @@
 
       <div class="chessBoard">
         <!-- Row 8 -->            
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="A08 rRook1" class="rook square light redArmy"><span draggable="true" ondragstart="drag(event)">&#9814;</span></div>
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="B08 rKnight1" class="knight square dark redArmy"><span draggable="true" ondragstart="drag(event)">&#9816;</span></div>
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="C08 rBishop1" class="bishop square light redArmy"><span draggable="true" ondragstart="drag(event)">&#9815;</span></div>
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="D08 rQueen" class="queen square dark redArmy"><span draggable="true" ondragstart="drag(event)">&#9813;</span></div>
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="E08 rKing" class="king square light redArmy"><span draggable="true" ondragstart="drag(event)">&#9812;</span></div>
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="F08 rBishop2" class="bishop square dark redArmy"><span draggable="true" ondragstart="drag(event)">&#9815;</span></div>
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="G08 rKnight2" class="knight square light redArmy"><span draggable="true" ondragstart="drag(event)">&#9816;</span></div>
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="H08 rRook2" class="rook square dark redArmy"><span draggable="true" ondragstart="drag(event)">&#9814;</span></div>
+        <div id="A08"><img id="bR" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Chess_rdt45.svg/45px-Chess_rdt45.svg.png" class="square light"></div>
+        <div id="B08"><img id="bN" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Chess_ndt45.svg/45px-Chess_ndt45.svg.png" class="square dark"></div>
+        <div id="C08"><img id="bB" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Chess_bdt45.svg/45px-Chess_bdt45.svg.png" class="square light"></div>
+        <div id="D08"><img id="bQ" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Chess_qdt45.svg/45px-Chess_qdt45.svg.png" class="square dark"></div>
+        <div id="E08"><img id="bK" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Chess_kdt45.svg/45px-Chess_kdt45.svg.png" class="square light"></div>
+        <div id="F08"><img id="bB" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Chess_bdt45.svg/45px-Chess_bdt45.svg.png" class="square dark"></div>
+        <div id="G08"><img id="bN" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Chess_ndt45.svg/45px-Chess_ndt45.svg.png" class="square light"></div>
+        <div id="H08"><img id="bR" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Chess_rdt45.svg/45px-Chess_rdt45.svg.png" class="square dark"></div>
         <!-- Row 7 -->      
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="A07 rPawnA" class="pawn square dark redArmy"><span draggable="true" ondragstart="drag(event)">&#9817;</span></div>
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="B07 rPawnB" class="pawn square light redArmy"><span draggable="true" ondragstart="drag(event)">&#9817;</span></div>
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="C07 rPawnC" class="pawn square dark redArmy"><span draggable="true" ondragstart="drag(event)">&#9817;</span></div>
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="D07 rPawnD" class="pawn square light redArmy"><span draggable="true" ondragstart="drag(event)">&#9817;</span></div>
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="E07 rPawnE" class="pawn square dark redArmy"><span draggable="true" ondragstart="drag(event)">&#9817;</span></div>
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="F07 rPawnF" class="pawn square light redArmy"><span draggable="true" ondragstart="drag(event)">&#9817;</span></div>
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="G07 rPawnG" class="pawn square dark redArmy"><span draggable="true" ondragstart="drag(event)">&#9817;</span></div>
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="H07 rPawnH" class="pawn square light redArmy"><span draggable="true" ondragstart="drag(event)">&#9817;</span></div>
+        <div id="A07"><img id="bP" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/45px-Chess_pdt45.svg.png" class="square dark"></div>
+        <div id="B07"><img id="bP" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/45px-Chess_pdt45.svg.png" class="square light"></div>
+        <div id="C07"><img id="bP" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/45px-Chess_pdt45.svg.png" class="square dark"></div>
+        <div id="D07"><img id="bP" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/45px-Chess_pdt45.svg.png" class="square light"></div>
+        <div id="E07"><img id="bP" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/45px-Chess_pdt45.svg.png" class="square dark"></div>
+        <div id="F07"><img id="bP" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/45px-Chess_pdt45.svg.png" class="square light"></div>
+        <div id="G07"><img id="bP" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/45px-Chess_pdt45.svg.png" class="square dark"></div>
+        <div id="H07"><img id="bP" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Chess_pdt45.svg/45px-Chess_pdt45.svg.png" class="square light"></div>
         <!-- Row 6 -->
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="A06" class="square light"></div>
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="B06" class="square dark"></div>
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="C06" class="square light"></div>
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="D06" class="square dark"></div>
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="E06" class="square light"></div>
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="F06" class="square dark"></div>
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="G06" class="square light"></div>
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="H06" class="square dark"></div>
+        <div id="A06" class="square light"></div>
+        <div id="B06" class="square dark"></div>
+        <div id="C06" class="square light"></div>
+        <div id="D06" class="square dark"></div>
+        <div id="E06" class="square light"></div>
+        <div id="F06" class="square dark"></div>
+        <div id="G06" class="square light"></div>
+        <div id="H06" class="square dark"></div>
         <!-- Row 5 -->
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="A05" class="square dark"></div>
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="B05" class="square light"></div>
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="C05" class="square dark"></div>
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="D05" class="square light"></div>
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="E05" class="square dark"></div>
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="F05" class="square light"></div>
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="G05" class="square dark"></div>
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="H05" class="square light"></div>
+        <div id="A05" class="square dark"></div>
+        <div id="B05" class="square light"></div>
+        <div id="C05" class="square dark"></div>
+        <div id="D05" class="square light"></div>
+        <div id="E05" class="square dark"></div>
+        <div id="F05" class="square light"></div>
+        <div id="G05" class="square dark"></div>
+        <div id="H05" class="square light"></div>
         <!-- Row 4 -->
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="A04" class="square light"></div>
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="B04" class="square dark"></div>
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="C04" class="square light"></div>
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="D04" class="square dark"></div>
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="E04" class="square light"></div>
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="F04" class="square dark"></div>
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="G04" class="square light"></div>
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="H04" class="square dark"></div>
+        <div id="A04" class="square light"></div>
+        <div id="B04" class="square dark"></div>
+        <div id="C04" class="square light"></div>
+        <div id="D04" class="square dark"></div>
+        <div id="E04" class="square light"></div>
+        <div id="F04" class="square dark"></div>
+        <div id="G04" class="square light"></div>
+        <div id="H04" class="square dark"></div>
         <!-- Row 3 --> 
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="drag1 A03" class="square dark"></div>
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="drag1 B03" class="square light"></div>
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="drag1 C03" class="square dark"></div>
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="drag1 D03" class="square light"></div>
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="drag1 E03" class="square dark"></div>
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="drag1 F03" class="square light"></div>
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="drag1 G03" class="square dark"></div>
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="drag1 H03" class="square light"></div>
+        <div id="A03" class="square dark"></div>
+        <div id="B03" class="square light"></div>
+        <div id="C03" class="square dark"></div>
+        <div id="D03" class="square light"></div>
+        <div id="E03" class="square dark"></div>
+        <div id="F03" class="square light"></div>
+        <div id="G03" class="square dark"></div>
+        <div id="H03" class="square light"></div>
         <!-- Row 2 -->
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="drag1 A02 bPawnA" class="pawn square light blueArmy"><span draggable="true" ondragstart="drag(event)">&#9817;</span></div>
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="drag1 B02 bPawnB" class="pawn square dark blueArmy"><span draggable="true" ondragstart="drag(event)">&#9817;</span></div>
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="drag1 C02 bPawnC" class="pawn square light blueArmy"><span draggable="true" ondragstart="drag(event)">&#9817;</span></div>
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="drag1 D02 bPawnD" class="pawn square dark blueArmy"><span draggable="true" ondragstart="drag(event)">&#9817;</span></div>
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="drag1 E02 bPawnE" class="pawn square light blueArmy"><span draggable="true" ondragstart="drag(event)">&#9817;</span></div>
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="drag1 F02 bPawnF" class="pawn square dark blueArmy"><span draggable="true" ondragstart="drag(event)">&#9817;</span></div>
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="drag1 G02 bPawnG" class="pawn square light blueArmy"><span draggable="true" ondragstart="drag(event)">&#9817;</span></div>
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="drag1 H02 bPawnH" class="pawn square dark blueArmy"><span draggable="true" ondragstart="drag(event)">&#9817;</span></div>
+        <div id="A02"><img id="wP" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/45px-Chess_plt45.svg.png" class="square light"></div>
+        <div id="B02"><img id="wP" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/45px-Chess_plt45.svg.png" class="square dark"></div>
+        <div id="C02"><img id="wP" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/45px-Chess_plt45.svg.png" class="square light"></div>
+        <div id="D02"><img id="wP" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/45px-Chess_plt45.svg.png" class="square dark"></div>
+        <div id="E02"><img id="wP" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/45px-Chess_plt45.svg.png" class="square light"></div>
+        <div id="F02"><img id="wP" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/45px-Chess_plt45.svg.png" class="square dark"></div>
+        <div id="G02"><img id="wP" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/45px-Chess_plt45.svg.png" class="square light"></div>
+        <div id="H02"><img id="wP" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Chess_plt45.svg/45px-Chess_plt45.svg.png" class="square dark"></div>
         <!-- Row 1 -->
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="A01 bRook1"  class="rook square dark blueArmy"><span draggable="true" ondragstart="drag(event)">&#9814;</span></div>
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="B01 bKnight1" class="knight square light blueArmy"><span draggable="true" ondragstart="drag(event)">&#9816;</span></div>
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="C01 bBishop1" class="bishop square dark blueArmy"><span draggable="true" ondragstart="drag(event)">&#9815;</span></div>
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="D01 bQueen" class="queen square light blueArmy"><span draggable="true" ondragstart="drag(event)">&#9813;</span></div>
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="E01 bKing" class="king square dark blueArmy"><span draggable="true" ondragstart="drag(event)">&#9812;</span></div>
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="F01 bBishop2" class="bishop square light blueArmy"><span draggable="true" ondragstart="drag(event)">&#9815;</span></div>
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="G01 bKnight2" class="knight square dark blueArmy"><span draggable="true" ondragstart="drag(event)">&#9816;</span></div>
-        <div ondrop="drop(event)" ondragover="allowDrop(event)" id="H01 bRook2" class="rook square light blueArmy"><span draggable="true" ondragstart="drag(event)">&#9814;</span></div> 
+        <div id="A01"><img id="wR" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Chess_rlt45.svg/45px-Chess_rlt45.svg.png" class="square dark"></div>
+        <div id="B01"><img id="wN" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Chess_nlt45.svg/45px-Chess_nlt45.svg.png" class="square light"></div>
+        <div id="C01"><img id="wB" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Chess_blt45.svg/45px-Chess_blt45.svg.png" class="square dark"></div>
+        <div id="D01"><img id="wQ" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Chess_klt45.svg/45px-Chess_klt45.svg.png" class="square light"></div>
+        <div id="E01"><img id="wK" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Chess_qlt45.svg/45px-Chess_qlt45.svg.png" class="square dark"></div>
+        <div id="F01"><img id="wB" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Chess_blt45.svg/45px-Chess_blt45.svg.png" class="square light"></div>
+        <div id="G01"><img id="wN" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Chess_nlt45.svg/45px-Chess_nlt45.svg.png" class="square dark"></div>
+        <div id="H01"><img id="wR" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Chess_rlt45.svg/45px-Chess_rlt45.svg.png" class="square light"></div> 
       </div>
       <div class="gridBottom">A B C D E F G H</div>
       <div class="gridRight">8 7 6 5 4 3 2 1</div>

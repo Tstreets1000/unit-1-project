@@ -1,337 +1,347 @@
 // =================================// 
 // ======= PIECE CLASSES ===== //
 // ==================================//
-const BLUE_ARMY_PIECES = {
-  bPawnA: {
+const WHITE_ARMY_PIECES = {
+  wP: {
       location: "A02",
       type: "pawn",
-      color: "blue",
+      color: "white",
       piece: "&#9817;",    
   },
 
-  bPawnB: {
+  wP: {
       location: "B02",
       type: "pawn",
-      color: "blue",
+      color: "white",
       piece: "&#9817;", 
   },
 
-  bPawnC: {
+  wP: {
       location: "C02",
       type: "pawn",
-      color: "blue",
+      color: "white",
       piece: "&#9817;", 
   },
 
-  bPawnD: {
+  wP: {
       location: "D02",
       type: "pawn",
-      color: "blue",
+      color: "white",
       piece: "&#9817;", 
   },
 
-  bPawnE: {
+  wP: {
       location: "E02",
       type: "pawn",
-      color: "blue",
+      color: "white",
       piece: "&#9817;", 
   },
 
-  bPawnF: {
+  wP: {
       location: "F02",
       type: "pawn",
-      color: "blue",
+      color: "white",
       piece: "&#9817;", 
   },
 
-  bPawnG: {
+  wP: {
       location: "G02",
       type: "pawn",
-      color: "blue",
+      color: "white",
       piece: "&#9817;",
   },
 
-  bPawnH: {
+  wP: {
       location: "H02",
       type: "pawn",
-      color: "blue",
+      color: "white",
       piece: "&#9817;",
   },
 
-  bQueen: {
+  wQ: {
       location: "D01",
       type: "queen",
-      color: "blue",
+      color: "white",
       piece: "&#9813;" 
   },
 
-  bKing: {
+  wK: {
       location: "E01",
       type: "king",
-      color: "blue",
+      color: "white",
       piece: "&#9812;" 
   },
 
-  bBishop1: {
+  wB: {
       column: "C01",
       type: "bishop",
-      color: "blue",
+      color: "white",
       piece: "&#9815;" 
   },
 
-  bBishop2: {
+  wB: {
       locaiton: "F01",
       type: "bishop",
-      color: "blue",
+      color: "white",
       piece: "&#9815;" 
   },
 
-  bKnight1: {
+  wN: {
       location: "B01",
       type: "knight",
-      color: "blue",
+      color: "white",
       piece: "&#9816;" 
   },
 
-  bKnight2: {
+  wN: {
       location: "G01",
       type: "knight",
-      color: "blue",
+      color: "white",
       piece: "&#9816;" 
   },
 
-  bRook1: {
+  wR: {
       location: "A01",
       type: "rook",
-      color: "blue",
+      color: "white",
       piece: "&#9814;" 
   },
 
-  bRook2: {
+  wR: {
       location: "H01",
       type: "rook",
-      color: "blue",
+      color: "white",
       piece: "&#9814;" 
   }
 }  
 
-const RED_ARMY_PIECES = {
-  rPawnA: {
+const BLACK_ARMY_PIECES = {
+  bP: {
       location: "A07",
       type: "pawn",
-      color: "red",
+      color: "black",
       piece: "&#9817;" 
   },
 
-  rPawnB: {
+  bP: {
       location: "B07",
       type: "pawn",
-      color: "red",
+      color: "black",
       piece: "&#9817;"  
   },  
   
-  rPawnC: {
+  bP: {
       location: "C07",
       type: "pawn",
-      color: "red",
+      color: "black",
       piece: "&#9817;"  
   },
   
-  rPawnD: {
+  bP: {
       location: "D07",
       type: "pawn",
-      color: "red",
+      color: "black",
       piece: "&#9817;"  
   },
   
-  rPawnE: {
+  bP: {
       location: "E07",
       type: "pawn",
-      color: "red",
+      color: "black",
       piece: "&#9817;"  
   },
   
-  rPawnF: {
+  bP: {
       location: "F07",
       type: "pawn",
-      color: "red",
+      color: "black",
       piece: "&#9817;"  
   },
   
-  rPawnG: {
+  bP: {
       location: "G07",
       type: "pawn",
-      color: "red",
+      color: "black",
       piece: "&#9817;"  
   },
   
-  rPawnH: {
+  bP: {
       location: "H07",
       type: "pawn",
-      color: "red",
+      color: "black",
       piece: "&#9817;"  
   },
   
-  rQueen: {
+  bQ: {
       location: "D08",
       type: "queen",
-      color: "red",
+      color: "black",
       piece: "&#9813;" 
   },
   
-  rKing: {
+  bK: {
       location: "E08",
       type: "king",
-      color: "red",
+      color: "black",
       piece: "&#9812;" 
   },
   
-  rBishop1: {
+  bB: {
       location: "C08",
       type: "bishop",
-      color: "red",
+      color: "black",
       piece: "&#9815;" 
   },
   
-  rBishop2: {
+  bB: {
       location: "F08",
       type: "bishop",
-      color: "red",
+      color: "black",
       piece: "&#9815;" 
   },
   
-  rKnight1: {
+  bN: {
       location: "B08",
       type: "knight",
-      color: "red",
+      color: "black",
       piece: "&#9816;" 
   },  
   
-  rKnight2: {
+  bN: {
       locaiton: "G08",
       type: "knight",
-      color: "red",
+      color: "black",
       piece: "&#9816;" 
   },
   
-  rRook1: {
+  bR: {
       location: "A08",
       type: "rook",
-      color: "red",
+      color: "black",
       piece: "&#9814;" 
   },
   
-  rRook2: {
+  bR: {
       location: "H08",
       type: "rook",
-      color: "red",
+      color: "black",
       piece: "&#9814;" 
   }
 }
 
 //==================================//
-// ======= cached elements  ====== //
+// ======= CACHED ============ //
 //==================================//
 const ENTER_BTN = document.querySelector('button')
 const START_BTN= document.querySelector('button')
 const PLAY_AGAIN_BTN = document.querySelector('button')
-const RED_ARMY_BTN= document.querySelector('button')
-const BLUE_ARMY_BTN = document.querySelector('button')
+const WHITE_ARMY_BTN= document.querySelector('button')
+const BLACK_ARMY_BTN = document.querySelector('button')
 const PLAYER1 = true
 const PLAYER2 = true
 const SQUARES_ALL = [] // ARRAY TO HOLD ALL POSITIONS ON BOARD 
-const PAWNS_ALL = [] // ARRAY TO HOLD ALL PAWNS 
-const ROOKS_ALL = [] // ARRAY TO HOLD ALL ROOKS 
-const KNIGHTS_ALL = [] // ARRAY TO HOLD ALL KNIGHTS 
-const BISHOPS_ALL = [] // ARRAY TO ALL BISHOPS 
-const KINGS_ALL = [] // ARRAY TO HOLD ALL KINGS
-const QUEENS_ALL = [] // ARRAY TO HOLD ALL QUEENS
+const ALL_PAWNS = [] // ARRAY TO HOLD ALL PAWNS 
+const ALL_ROOKS = [] // ARRAY TO HOLD ALL ROOKS 
+const ALL_KNIGHTS = [] // ARRAY TO HOLD ALL KNIGHTS 
+const ALL_BISHOPS = [] // ARRAY TO ALL BISHOPS 
+const ALL_KINGS = [] // ARRAY TO HOLD ALL KINGS
+const ALL_QUEENS = [] // ARRAY TO HOLD ALL QUEENS
 
-const SQUARES = document.querySelectorAll(".box")
+const SQUARES = document.querySelectorAll(".square")
   SQUARES.forEach((div) => {
     SQUARES_ALL.push(div)
   })
 
-const PAWNS = document.querySelectorAll(".pawn")
+const PAWNS = document.querySelectorAll("wP, bP")
   PAWNS.forEach((div) => {
-    PAWNS_ALL.push(div)
+    ALL_PAWNS.push(div)
   })
 
-const ROOKS = document.querySelectorAll(".rook")
+const ROOKS = document.querySelectorAll("wR, bR")
   ROOKS.forEach((div) => {
-  ROOKS_ALL.push(div)
+    ALL_ROOKS.push(div)
   })
 
-const KNIGHTS = document.querySelectorAll(".knight")  
+const KNIGHTS = document.querySelectorAll("wN, bN")  
   KNIGHTS.forEach((div) => {
-    KNIGHTS_ALL.push(div)
+    ALL_KNIGHTS.push(div)
   })
 
-const BISHOPS = document.querySelectorAll(".bishop") 
+const BISHOPS = document.querySelectorAll("wB, wB") 
   BISHOPS.forEach((div) => {
-    BISHOPS_ALL.push(div)
+    ALL_BISHOPS.push(div)
   })
 
-const KINGS = document.querySelectorAll(".king")
+const KINGS = document.querySelectorAll("wK, wK")
   KINGS.forEach((div) => {
-    KINGS_ALL.push(div)
+    ALL_KINGS.push(div)
   }) 
 
-const QUEENS =document.querySelectorAll(".queen")
+const QUEENS = document.querySelectorAll("wQ, wQ")
   QUEENS.forEach((div) => {
-    QUEENS_ALL.push(div)
-  })  
+    ALL_QUEENS.push(div)
+  }) 
+  
+ 
 
-//======================================================================================//
-//========================= EVENT LISTENERS ================================= //
-//=======================================================================================//
+//====================================================//
+// ===== (CHESS PIECES) FUNCTIONS ============//
+//====================================================//
+let whiteOps = ["wK", "wQ", "wR", "wN", "wB", "wP"]
+let blackOps = ["bK", "bQ", "bR", "bN", "bB", "bP"]
 
-//==== CAROUSEL ENTER BUTTON FOR SCREEN #1 ======//
-document.querySelector('.enterBtn').addEventListener('click', enter => {
-  document.querySelector('.car1').style.display='none' 
-})
+const BLACK_CAPTURED = (whiteOps, blackOps) => {
+  if (whiteOps.forEach = blackOps.forEach)
+    return whiteOps
+  }
+const WHITE_CAPTURED = (whiteOps, blackOps) => {
+    if (whiteOps.forEach = blackOps.forEach)
+      return blackOps
+    }
 
-//===== CAROUSEL - START BUTTON FOR SCREEN #2 =======//
-document.querySelector('.startBtn').addEventListener('click', start => {
-  document.querySelector('.car2').style.display='none'
-})
 
-//====== CAROUSEL - PLAY AGAIN BUTTON FOR SCREEN #3 =====//
-document.querySelector('.playAgainBtn').addEventListener('click', event => {
-  document.querySelector('.car2').style.display='grid'
-})
+function pawnMoves(start, end, army) {
+  //======== Black Army Pawns (move 2 squares)
+  if (army === "bP" && start === 6 && end === 4) { 
+    return true
+  }
+  //======== White Army Pawns (move 2 squares)
+  if (army === "wP" && start === 1 && end === 3) { 
+    return true
+  } 
+  //======== Black & White Army Pawns (move 1 square)
+  if ((army === "bP" && start - 1) || (army === "wP" && start + 1)) {
+    return true 
+  }
+  //========Black & White Pawn Captures
+  if ((army === "bP" && whiteOps.includes(end) === WHITE_CAPTURED ) || (army === "wP" && blackOps.includes(end) === BLACK_CAPTURED )) { 
+    return true
+  }
+}
+  
 
-//====== CAROUSEL - EXIT GAME BUTTON FOR SCREEN #3 =====//
-document.querySelector('.exitGameBtn').addEventListener('click', event => {
-  document.querySelector('.car1').style.display='grid'
-})
+    
+  
 
-//====== TIMER - RESET CLOCK BUTTON FOR SCREEN #3 =====//
-/*document.querySelector('.timer_resetBtn').addEventListener('click', event => {
-  function timer_startBtn
-})
-*/
+    
 
-//========== Timer - START CLOCK BUTTON FOR SCREEN #3 =======//
-document.querySelector('.timer_StartBtn').addEventListener('click', event => {
-  document.querySelector('.timer_StartBtn') = START_INTERVAL()
-})
+
 
 // ===== INITIALIZE FUNCTIONS ===== //
-function init_red() {
-  renderBoard,
-  assignPlayer1,
-  assignPlayer2,
-  renderMessage,
-  renderControls
+function init_black() {
+  renderBoard(),
+  assignPlayer1(),
+  assignPlayer2(),
+  renderMessage(),
+  renderControls()
 }
 
-function init_blue() {
-  renderBoard,
-  asignPlayer1,
-  assignPlayer2,
-  renderMessage,
-  renderControls
+function init_white() {
+  renderBoard(),
+  asignPlayer1(),
+  assignPlayer2(),
+  renderMessage(),
+  renderControls()
 }
 //========================================//
 //==========TIMER FUNCTIONS==============//
@@ -369,7 +379,6 @@ const START_INTERVAL = () => {
     START_INTERVAL()
   })
 }
-
   
 //=== SWAP TIMER ===//
 const TIMER_SWAP = () => {
@@ -391,62 +400,113 @@ const TIME_WARNING = () => {
 }
 
 //==============================================================================================================================//
-//When redArmy button is selected; stay highlighted. Render initialized board with red army on the bottom and blue army on top.//
+//When black Army button is selected; stay highlighted. Render initialized board with black army on the bottom and white army on top.//
 //==============================================================================================================================//
 
-document.querySelector('.redArmyBtn').addEventListener('click', () => {
-  //document.querySelector('.redArmyBtn').style.backgroundColor='#9F0000' 
-  //document.querySelector('.blueArmyBtn').style.backgroundColor='white'
-  RED_ARMY_BTN.addEventListener('click', function init_red() {
+document.querySelector('.blackArmyBtn').addEventListener('click', () => {
+  document.querySelector('.blackArmyBtn').style.backgroundColor='#9F0000' 
+  document.querySelector('.whiteArmyBtn').style.backgroundColor='white'
+  BLACK_ARMY_BTN.addEventListener('click', function init_black() {
   })
-  alert("Player 1: Red Army / Player 2: Blue Army")
+  alert ('Player 1: Black Army / Player 2 Default: White Army')
 })
 
-function init_red() {
+function init_black() {
   renderBoard = [
-    ['#bRook1', '#bKnight1', '#bBishop1', '#bQueen', '#bKing', '#bBishop2', '#bBishop2', '#bRook2'], // col 8
-    ['#bPawnA', '#bPawnB', '#bPawnC', '#bPawnD', '#bPawnE', '#bPawnF', '#bPawnG', '#bPawnH'], // col 7
-    [null, null, null, null, null, null, null, null], // col 6
-    [null, null, null, null, null, null, null, null], // col 5
-    [null, null, null, null, null, null, null, null], // col 4
-    [null, null, null, null, null, null, null, null], // col 3  
-    ['#rRook1', '#rKnight1', '#rBishop1', '#rQueen', '#rKing', '#rBishop2', '#rBishop2', '#rRook2'], // col 2 
-    ['#rPawnA', '#rPawnB', '#rPawnC', '#rPawnD', '#rPawnE', '#rPawnF', '#rPawnG', '#rPawnH'], // col 1
+    ['wR', 'wN', 'wB', 'wQ', 'wK', 'wB', 'wN', 'wR'], // col 8
+    ['wP', 'wP', 'wP', 'wP', 'wP', 'wP', 'wP', 'wP'], // col 7
+    ['  ', '  ', '  ', '  ', '  ', '  ', '  ', '  '], // col 6
+    ['  ', '  ', '  ', '  ', '  ', '  ', '  ', '  '], // col 5
+    ['  ', '  ', '  ', '  ', '  ', '  ', '  ', '  '], // col 4
+    ['  ', '  ', '  ', '  ', '  ', '  ', '  ', '  '], // col 3 
+    ['bP', 'bP', 'bP', 'bP', 'bP', 'bP', 'bP', 'bP'], // col 2
+    ['bR', 'bN', 'bB', 'bQ', 'bK', 'bB', 'bN', 'bR'], // col 1 
     // rowA, rowB, rowC, rowD, rowE, rowF, rowG, rowH 
   ]
-  init_red()
+  init_black()
 }
 
 // ==============================================================================================================================//
-// When blueArmy button is selected; stay highlighted. Render initialized board with blue army on the bottom and red army on top. //
+// When white Army button is selected; stay highlighted. Render initialized board with white army on the bottom and black army on top. //
 // ==============================================================================================================================//
 
-document.querySelector('.blueArmyBtn').addEventListener('click', () => {
-  document.querySelector('.blueArmyBtn').style.backgroundColor='#020287' 
-  document.querySelector('.redArmyBtn').style.backgroundColor='white'
-  BLUE_ARMY_BTN.addEventListener('click', function init_blue() {
+document.querySelector('.whiteArmyBtn').addEventListener('click', () => {
+  document.querySelector('.whiteArmyBtn').style.backgroundColor='#020287' 
+  document.querySelector('.blackArmyBtn').style.backgroundColor='white'
+  WHITE_ARMY_BTN.addEventListener('click', function init_white() {
   })
-  alert('Player 1: Blue Army / Player 2: Red Army') 
+  alert ('Player 1: White Army / Player 2 Default Black Army') 
 })
 
-function init_blue() {
+function init_white() {
   renderBoard = [
-    ['#rRook1', '#rKnight1', '#rBishop1', '#rQueen', '#rKing', '#rBishop2', '#rBishop2', '#rRook2'], // col 8
-    ['#rPawnA', '#rPawnB', '#rPawnC', '#rPawnD', '#rPawnE', '#rPawnF', '#rPawnG', '#rPawnH'], // col 7
-    [null, null, null, null, null, null, null, null], // col 6
-    [null, null, null, null, null, null, null, null], // col 5
-    [null, null, null, null, null, null, null, null], // col 4
-    [null, null, null, null, null, null, null, null], // col 3
-    ['#bRook1', '#bKnight1', '#bBishop1', '#bQueen', '#bKing', '#bBishop2', '#bBishop2', '#bRook2'], // col 2
-    ['#bPawnA', '#bPawnB', '#bPawnC', '#bPawnD', '#bPawnE', '#bPawnF', '#bPawnG', '#bPawnH'], // col 1
-    // rowA, rowB, rowC, rowD, rowE, rowF, rowG, rowH
-  ]
-  init_blue()
-  }
-//====================================================//
-// ===== (CHESS PIECES) FUNCTIONS ============//
-//====================================================// 
+  ['bR', 'bN', 'bB', 'bQ', 'bK', 'bB', 'bN', 'bR'], // col 8
+  ['bP', 'bP', 'bP', 'bP', 'bP', 'bP', 'bP', 'bP'], // col 7
+  ['  ', '  ', '  ', '  ', '  ', '  ', '  ', '  '], // col 6
+  ['  ', '  ', '  ', '  ', '  ', '  ', '  ', '  '], // col 5
+  ['  ', '  ', '  ', '  ', '  ', '  ', '  ', '  '], // col 4
+  ['  ', '  ', '  ', '  ', '  ', '  ', '  ', '  '], // col 3 
+  ['wP', 'wP', 'wP', 'wP', 'wP', 'wP', 'wP', 'wP'], // col 2
+  ['wR', 'wN', 'wB', 'wQ', 'wK', 'wB', 'wN', 'wR'], // col 1 
+  // rowA, rowB, rowC, rowD, rowE, rowF, rowG, rowH 
+]
+init_white()
+}
+  
+ 
 
+//======================================================================================//
+//========================= EVENT LISTENERS ================================= //
+//=======================================================================================//
+
+//==== CAROUSEL ENTER BUTTON FOR SCREEN #1 ======//
+document.querySelector('.enterBtn').addEventListener('click', enter => {
+  document.querySelector('.car1').style.display='none' 
+})
+
+//===== CAROUSEL - START BUTTON FOR SCREEN #2 =======//
+document.querySelector('.startBtn').addEventListener('click', start => {
+  document.querySelector('.car2').style.display='none'
+})
+
+//====== CAROUSEL - PLAY AGAIN BUTTON FOR SCREEN #3 =====//
+document.querySelector('.playAgainBtn').addEventListener('click', event => {
+  document.querySelector('.car2').style.display='grid'
+})
+
+//====== CAROUSEL - EXIT GAME BUTTON FOR SCREEN #3 =====//
+document.querySelector('.exitGameBtn').addEventListener('click', event => {
+  document.querySelector('.car1').style.display='grid'
+})
+
+//====== TIMER - RESET CLOCK BUTTON FOR SCREEN #3 =====//
+/*document.querySelector('.timer_resetBtn').addEventListener('click', event => {
+  function timer_startBtn
+})
+*/
+
+//========== TIMER - START CLOCK BUTTON FOR SCREEN #3 =======//
+document.querySelector('.timer_StartBtn').addEventListener('click', event => {
+  document.querySelector('.timer_StartBtn') = START_INTERVAL()
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 function allowDrop(ev) {
   ev.preventDefault()
 }
@@ -461,7 +521,7 @@ function drop(ev) {
   ev.target.appendChild(document.getElementById(data))
 }
 
-/*----- (CHESS PIECES) DRAG AND DROP Statements -----*/
+//----- (CHESS PIECES) DRAG AND DROP Statements -----*/
 
 // ROOKS - Can move lateral and horizontal across all 8 squares//
 // KNIGHTS - Can move in L-shape; total of 4 squares from starting point//
