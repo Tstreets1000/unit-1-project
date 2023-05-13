@@ -5,7 +5,6 @@
   height: 800px;
   width: 100%;
   margin: 0 auto;
-  background-color: pink;
 }
 
 .car1 {
@@ -18,6 +17,7 @@
   background-color: rgb(255, 215, 221);
   z-index: 3;
 }
+
 .car2 {
   position: absolute;
   width: 100%;
@@ -28,6 +28,7 @@
   background-color: rgb(140, 232, 255);
   z-index: 2;
 }
+
 .car3 {
   position: absolute;
   width: 100%;
@@ -39,11 +40,10 @@
   z-index: 1;
 }
 
-
 p1 {
   font-size: 50px;
   text-align: center;
-  color: rgb(159, 0, 0);
+  color: black;
   margin-top: 100px;
 }
 
@@ -52,7 +52,6 @@ p1 {
   height: 200px;
 }
 
-
 /* ==== Buttons ==== */
 .player1, .player2 {
   font-size: 20px;
@@ -60,67 +59,74 @@ p1 {
 }
 
 .enterBtn {
-  color: rgb(159, 0, 0);
+  color: black;
   background-color: white;
   margin-bottom: 300px;
   margin-top: 50px;
   font-size: 40px;
+}
+
+.enterBtn:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  
 }
 
 .startBtn {
-  color: rgb(159, 0, 0);
+  color: black;
   background-color: white;
   margin-bottom: 300px;
   margin-top: 50px;
   font-size: 40px;
 }
 
-.playAgainBtn {
-  color: rgb(159, 0, 0);
+.startBtn:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+#playAgain {
+  color: black;
   background-color: white;
   margin-top: -350px;
   margin-right: 245px;
   font-size: 20px;
 }
 
-.exitGameBtn {
+#playAgain:hover {
+  background-color: black;
   color: white;
-  background-color: rgb(159, 0, 0);
+  cursor: pointer; 
+}
+
+#exit {
+  color: white;
+  background-color: black;
   margin-top: -350px;
   margin-left: 225px;;
   font-size: 20px;
 }
 
-
-.enterBtn:hover, .startBtn:hover, .playAgainBtn:hover, .timer_StartBtn:hover {
-  background-color: rgb(159, 0, 0);
-  color: white;
-  cursor: pointer;
-  
-}
-
-.timer_ResetBtn:hover, .exitGameBtn:hover {
-  color:rgb(159, 0, 0);
+#exit:hover {
+  color: black;
   background-color: white;
   font-weight: bold;
   cursor: pointer;
 }
- 
-.blackArmyBtn:hover {
-  background-color: rgb(159, 0, 0);
+
+.timer_StartBtn {
+  color: black;
+  font-weight: bold;
+  font-size: large;
 }
 
-.whiteArmyBtn:hover {
-  background-color: rgb(2, 2, 135);
-}
-
-.blackArmyBtn, .whiteArmyBtn {
-  width: 450px;
-  height: 200px;
-}
-
-.startBtn {
-  margin-top: 150px;
+.timer_StartBtn:hover {
+  color: black;
+  background-color: white;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .timer_ResetBtn {
@@ -129,13 +135,44 @@ p1 {
   margin-top: 150px;
   color: white;
   font-size: large;
-  background-color: rgb(159, 0, 0);  
+  background-color: black;  
 }
 
-.timer_StartBtn {
-  color: rgb(159, 0, 0);
+.timer_ResetBtn:hover {
+  background-color: white;
+  color: white;
   font-weight: bold;
-  font-size: large;
+  cursor: pointer;
+}
+
+.whiteArmyBtn {
+  background-color: black;
+  color: white;
+  width: 450px;
+  height: 200px;
+  border: 4px;
+  cursor: pointer;
+}
+
+.whiteArmyBtn:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer
+}
+
+.blackArmyBtn {
+  background-color: black;
+  color: white;
+  width: 450px;
+  height: 200px;
+  border: 4px;
+  cursor: pointer;
+}
+
+.blackArmyBtn:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
 }
 
 .battleChessLogo {
@@ -143,7 +180,7 @@ p1 {
   height: 200px;
 }
 
-/*==== Pictures on carousel #2 ==== */
+/*====Pictures on carousel #2==== */
 .blackArmy, .whiteArmy {
   width: 430px;
   height: 180px;
@@ -183,7 +220,7 @@ p1 {
 }
 
 .blackArmy {
-  color: rgb(183, 10, 10);
+  color: black;
   cursor: grab;
   margin-left: auto;
   margin-right: auto;
@@ -193,7 +230,7 @@ p1 {
 }
 
 .whiteArmy {
-  color: rgb(2, 2, 204);
+  color: white;
   cursor: grab;
   margin-left: auto;
   margin-right: auto;
@@ -234,9 +271,10 @@ p1 {
   margin-bottom: 600px;
 }
 
-
-
-
+h1 {
+  display: flex;
+  border-top: 100px;
+}
 
 
 

@@ -1,6 +1,139 @@
+/*===========================================*/
+/*============= CONSTANTS ===================*/
+/*===========================================*/
+const COLORS = {
+  '0': 'transparent',
+  '1': ["wK", "wQ", "wR", "wN", "wB", "wP"],
+  '-1': ["bK", "bQ", "bR", "bN", "bB", "bP"]
+}
+/*===============================================*/
+/*============== STATE VARIABLES ================*/
+/*===============================================*/
+let turn; // this will be 1 or -1
+let board; // this will be a 2d array of 8 arrays with 8 values
+let winner; // this will be set to null, 1, -1 or 'T'
+
+/*==============================================*/
+/*============= CACHED ELEMENTS ================*/
+/*==============================================*/
+const messageEl = document.querySelector('h1')
+const enter = document.querySelector('.enterBtn')
+const start = document.querySelector('.startBtn') 
+const PLAY_AGAIN = document.querySelector('#playAgain')
+const TIMER_RESET = document.querySelector('#timer_Reset')
+const exitGame = document.querySelector('#exit')
+const whiteArmy = document.querySelector('.whiteArmyBtn')
+const blackArmy = document.querySelector('.blackArmyBtn')
+
+
+
+/*==============================================*/
+/*============= EVENT LISTENERS ================*/
+/*==============================================*/
+
+document.getElementById('timer_Start').addEventListener('click', runTimer)
+
+document.getElementById('playAgain').addEventListener('click', init_Game)
+
+/*------------ TEAM SELECT BUTTON ---------*/
+document.querySelector('.whiteArmyBtn').addEventListener('click', () => {
+  document.querySelector('.whiteArmyBtn').style.backgroundColor='FFFFFF' 
+  document.querySelector('.blackArmyBtn').style.backgroundColor='000000'
+  whiteArmy.addEventListener('click', function init_Game() {
+  })
+    alert ('Player 1: White Army / Player 2 Default Black Army') 
+})
+
+//----- CAROUSEL ENTER BUTTON FOR SCREEN #1 -----//
+document.querySelector('.enterBtn').addEventListener('click', enterGame => {
+  document.querySelector('.car1').style.display='none' 
+})
+
+//----- CAROUSEL - START BUTTON FOR SCREEN #2 -----//
+document.querySelector('.startBtn').addEventListener('click', startGame => {
+  document.querySelector('.car2').style.display='none'
+})
+
+
+/*=======================================*/
+/*============= FUNCTIONS ============== */
+/*=======================================*/
+
+function init_Game() {
+  turn = 1;
+  board = [
+    ['bR', 'bN', 'bB', 'bQ', 'bK', 'bB', 'bN', 'bP'], // col 8
+    ['bP', 'bP', 'bP', 'bP', 'bP', 'bP', 'bP', 'bP'], // col 7
+    ['  ', '  ', '  ', '  ', '  ', '  ', '  ', '  '], // col 6
+    ['  ', '  ', '  ', '  ', '  ', '  ', '  ', '  '], // col 5
+    ['  ', '  ', '  ', '  ', '  ', '  ', '  ', '  '], // col 4
+    ['  ', '  ', '  ', '  ', '  ', '  ', '  ', '  '], // col 3 
+    ['wP', 'wP', 'wP', 'wP', 'wP', 'wP', 'wP', 'wP'], // col 2
+    ['wR', 'wN', 'wB', 'wQ', 'wK', 'wB', 'wN', 'wR'], // col 1 
+    // rowA, rowB, rowC, rowD, rowE, rowF, rowG, rowH 
+  ]
+    winner = null;
+    init_Game();
+}
+
+//======== START TIMER ========//
+function runTimer() {
+
+const TIMER_START = () => {
+  intervalId = setInterval(() => {
+    if (currentPlayer === 1) {
+          UPDATE_PLAYER1_TIMER()
+    if (player1 === 0) {
+        clearInterval(intervalId)  
+    } else {
+        UPDATE_PLAYER2_TIMER()
+    if (player2 === 0) {
+        clearInterval(intervalId)
+        }  
+      }
+    } 
+    START_INTERVAL()
+  })
+}
+  
+//=== SWAP TIMER ===//
+const TIMER_SWAP = () => {
+  if (!playing) return
+    currentPlayer = currentPlayer === 1 ? -1 : 1
+}
+
+  //===TIMER WARNING ===//
+const TIME_WARNING = () => {
+  if (min < 0 && sec <= 10) {
+    if (player1 === 1) {
+      document.querySelector('.clock').style.color = '#FF0000'
+    } 
+  if (min < 0 && sec <= 10)
+    if (player2 === -1) {
+      document.querySelector('.clock').style.color = '#FF0000'
+    }
+  }
+}
+}
+
+function resetTimer() {
+// ------Need reset Timer ------ //
+}
+
+const UPDATE_PLAYER1_TIMER = () => {
+  document.querySelector('.clock1').runTimer = '1'
+}
+
+const UPDATE_PLAYER2_TIMER = () => {
+  document.querySelector('.clock2').runTimer = '-1'
+}
+
+
+
 // =================================// 
 // ======= PIECE CLASSES ===== //
 // ==================================//
+ 
 const WHITE_ARMY_PIECES = {
   wP: {
       location: "A02",
@@ -229,16 +362,10 @@ const BLACK_ARMY_PIECES = {
   }
 }
 
-//==================================//
-// ======= CACHED ============ //
-//==================================//
-const ENTER_BTN = document.querySelector('button')
-const START_BTN= document.querySelector('button')
-const PLAY_AGAIN_BTN = document.querySelector('button')
-const WHITE_ARMY_BTN= document.querySelector('button')
-const BLACK_ARMY_BTN = document.querySelector('button')
-const PLAYER1 = true
-const PLAYER2 = true
+//===============================================//
+// ============ CACHED ARRAYS ============ //
+//===============================================//
+const CAPTURED = [] // ARRAY TO HOLD CAPTURED PIECES
 const SQUARES_ALL = [] // ARRAY TO HOLD ALL POSITIONS ON BOARD 
 const ALL_PAWNS = [] // ARRAY TO HOLD ALL PAWNS 
 const ALL_ROOKS = [] // ARRAY TO HOLD ALL ROOKS 
@@ -267,228 +394,114 @@ const KNIGHTS = document.querySelectorAll("wN, bN")
     ALL_KNIGHTS.push(div)
   })
 
-const BISHOPS = document.querySelectorAll("wB, wB") 
+const BISHOPS = document.querySelectorAll("wB, bB") 
   BISHOPS.forEach((div) => {
     ALL_BISHOPS.push(div)
   })
 
-const KINGS = document.querySelectorAll("wK, wK")
+const KINGS = document.querySelectorAll("wK, bK")
   KINGS.forEach((div) => {
     ALL_KINGS.push(div)
   }) 
 
-const QUEENS = document.querySelectorAll("wQ, wQ")
+const QUEENS = document.querySelectorAll("wQ, bQ")
   QUEENS.forEach((div) => {
     ALL_QUEENS.push(div)
   }) 
   
- 
 
 //====================================================//
 // ===== (CHESS PIECES) FUNCTIONS ============//
 //====================================================//
-let whiteOps = ["wK", "wQ", "wR", "wN", "wB", "wP"]
-let blackOps = ["bK", "bQ", "bR", "bN", "bB", "bP"]
-
-const BLACK_CAPTURED = (whiteOps, blackOps) => {
-  if (whiteOps.forEach = blackOps.forEach)
-    return whiteOps
-  }
-const WHITE_CAPTURED = (whiteOps, blackOps) => {
-    if (whiteOps.forEach = blackOps.forEach)
-      return blackOps
-    }
-
-
-function pawnMoves(start, end, army) {
-  //======== Black Army Pawns (move 2 squares)
-  if (army === "bP" && start === 6 && end === 4) { 
-    return true
-  }
-  //======== White Army Pawns (move 2 squares)
-  if (army === "wP" && start === 1 && end === 3) { 
-    return true
-  } 
-  //======== Black & White Army Pawns (move 1 square)
-  if ((army === "bP" && start - 1) || (army === "wP" && start + 1)) {
-    return true 
-  }
-  //========Black & White Pawn Captures
-  if ((army === "bP" && whiteOps.includes(end) === WHITE_CAPTURED ) || (army === "wP" && blackOps.includes(end) === BLACK_CAPTURED )) { 
-    return true
-  }
-}
-  
-
-    
-  
-
-    
-
-
 
 // ===== INITIALIZE FUNCTIONS ===== //
-function init_black() {
-  renderBoard(),
-  assignPlayer1(),
-  assignPlayer2(),
-  renderMessage(),
-  renderControls()
+function render() {
+    renderBoard(),
+    renderMessage(),
+    renderControls(),
+    playChess()
 }
 
-function init_white() {
-  renderBoard(),
-  asignPlayer1(),
-  assignPlayer2(),
-  renderMessage(),
-  renderControls()
-}
-//========================================//
-//==========TIMER FUNCTIONS==============//
-//=======================================//
+//----PIECES MOVING TO SQAURES WHEN CLICKED ---//
+let state = false //false if no piece has been selected
+let currentPiece
+let currentCell
 
-//=== Time warning below 30 seconds - Change timer numbers to yellow ====//
+let cells = document.querySelectorAll('.square')
+console.log(cells)
+  
+for (let i = 0; i < cells.length; i++) { 
+    cells[i].addEventListener('click', (event) => {
+console.log(event.target)
 
-//=== START TIMER ===// 
-let player1 = 60
-let player2 = 60
-let currentPlayer = 1
-let intervalId 
+if (state === !winner) {
+  
+  for (let i = 0; i < cells.length; i++) {
+    cells[i].addEventListener('click', (event) => {
+      cells[i] = currentPiece
+      console.log(currentPiece)
+    })
+  }
+  currentPiece.addEventListener('click', (event) => {
 
-const UPDATE_PLAYER1_TIMER = () => {
-  document.querySelector('.clock1').textContent = player1
-}
+  })
+  console.log(newCell)
 
-const UPDATE_PLAYER2_TIMER = () => {
-  document.querySelector('.clock2').textContent = player2
-}
-//=== START TIMER ===//
-const START_INTERVAL = () => {
-  intervalId = setInterval(() => {
-    if (currentPlayer === 1) {
-          UPDATE_PLAYER1_TIMER()
-    if (player1 === 0) {
-        clearInterval(intervalId)  
-    } else {
-        UPDATE_PLAYER2_TIMER()
-    if (player2 === 0) {
-        clearInterval(intervalId)
-        }  
-      }
-    } console.log(START_INTERVAL)
-    START_INTERVAL()
+} 
+
+      
   })
 }
-  
-//=== SWAP TIMER ===//
-const TIMER_SWAP = () => {
-  if (!playing) return
-    currentPlayer = currentPlayer === 1 ? 2 : 1
-}
 
-  //===TIMER WARNING ===//
-const TIME_WARNING = () => {
-  if (min < 0 && sec <= 10) {
-    if (player1 === 1) {
-      document.querySelector('.clock').style.color = '#FF0000'
-    } 
-  if (min < 0 && sec <= 10)
-    if (player2 === 1) {
-      document.querySelector('.clock').style.color = '#FF0000'
+
+
+
+
+
+
+
+
+
+
+
+
+/* function bP (start, end, army) { //============Black Pawns (move 2 aquares)
+  
+  for (let i = 0; i < whiteOps.length; i++) { //=========Loop through array of whiteOps
+    
+    if (army === "bP" && start === 6 && end === 4) { //======== Black Pawns (move 2 squares)
+      return true
+    }
+    if (army === "bP" && start - 1) { //======== Black Pawns (move 1 square)
+      return true 
+    }
+    if (army === "bP" && whiteOps.includes(end) === CAPTURED) { //======== Black Pawn Captures
+      return true
+      }
     }
   }
-}
-
-//==============================================================================================================================//
-//When black Army button is selected; stay highlighted. Render initialized board with black army on the bottom and white army on top.//
-//==============================================================================================================================//
-
-document.querySelector('.blackArmyBtn').addEventListener('click', () => {
-  document.querySelector('.blackArmyBtn').style.backgroundColor='#9F0000' 
-  document.querySelector('.whiteArmyBtn').style.backgroundColor='white'
-  BLACK_ARMY_BTN.addEventListener('click', function init_black() {
-  })
-  alert ('Player 1: Black Army / Player 2 Default: White Army')
-})
-
-function init_black() {
-  renderBoard = [
-    ['wR', 'wN', 'wB', 'wQ', 'wK', 'wB', 'wN', 'wR'], // col 8
-    ['wP', 'wP', 'wP', 'wP', 'wP', 'wP', 'wP', 'wP'], // col 7
-    ['  ', '  ', '  ', '  ', '  ', '  ', '  ', '  '], // col 6
-    ['  ', '  ', '  ', '  ', '  ', '  ', '  ', '  '], // col 5
-    ['  ', '  ', '  ', '  ', '  ', '  ', '  ', '  '], // col 4
-    ['  ', '  ', '  ', '  ', '  ', '  ', '  ', '  '], // col 3 
-    ['bP', 'bP', 'bP', 'bP', 'bP', 'bP', 'bP', 'bP'], // col 2
-    ['bR', 'bN', 'bB', 'bQ', 'bK', 'bB', 'bN', 'bR'], // col 1 
-    // rowA, rowB, rowC, rowD, rowE, rowF, rowG, rowH 
-  ]
-  init_black()
-}
-
-// ==============================================================================================================================//
-// When white Army button is selected; stay highlighted. Render initialized board with white army on the bottom and black army on top. //
-// ==============================================================================================================================//
-
-document.querySelector('.whiteArmyBtn').addEventListener('click', () => {
-  document.querySelector('.whiteArmyBtn').style.backgroundColor='#020287' 
-  document.querySelector('.blackArmyBtn').style.backgroundColor='white'
-  WHITE_ARMY_BTN.addEventListener('click', function init_white() {
-  })
-  alert ('Player 1: White Army / Player 2 Default Black Army') 
-})
-
-function init_white() {
-  renderBoard = [
-  ['bR', 'bN', 'bB', 'bQ', 'bK', 'bB', 'bN', 'bR'], // col 8
-  ['bP', 'bP', 'bP', 'bP', 'bP', 'bP', 'bP', 'bP'], // col 7
-  ['  ', '  ', '  ', '  ', '  ', '  ', '  ', '  '], // col 6
-  ['  ', '  ', '  ', '  ', '  ', '  ', '  ', '  '], // col 5
-  ['  ', '  ', '  ', '  ', '  ', '  ', '  ', '  '], // col 4
-  ['  ', '  ', '  ', '  ', '  ', '  ', '  ', '  '], // col 3 
-  ['wP', 'wP', 'wP', 'wP', 'wP', 'wP', 'wP', 'wP'], // col 2
-  ['wR', 'wN', 'wB', 'wQ', 'wK', 'wB', 'wN', 'wR'], // col 1 
-  // rowA, rowB, rowC, rowD, rowE, rowF, rowG, rowH 
-]
-init_white()
-}
+    bP()
+    // 
   
- 
-
-//======================================================================================//
-//========================= EVENT LISTENERS ================================= //
-//=======================================================================================//
-
-//==== CAROUSEL ENTER BUTTON FOR SCREEN #1 ======//
-document.querySelector('.enterBtn').addEventListener('click', enter => {
-  document.querySelector('.car1').style.display='none' 
-})
-
-//===== CAROUSEL - START BUTTON FOR SCREEN #2 =======//
-document.querySelector('.startBtn').addEventListener('click', start => {
-  document.querySelector('.car2').style.display='none'
-})
-
-//====== CAROUSEL - PLAY AGAIN BUTTON FOR SCREEN #3 =====//
-document.querySelector('.playAgainBtn').addEventListener('click', event => {
-  document.querySelector('.car2').style.display='grid'
-})
-
-//====== CAROUSEL - EXIT GAME BUTTON FOR SCREEN #3 =====//
-document.querySelector('.exitGameBtn').addEventListener('click', event => {
-  document.querySelector('.car1').style.display='grid'
-})
-
-//====== TIMER - RESET CLOCK BUTTON FOR SCREEN #3 =====//
-/*document.querySelector('.timer_resetBtn').addEventListener('click', event => {
-  function timer_startBtn
-})
+  
+function wP (start, end, army) { //======== White Pawns (move 2 squares)
+  for (let i = 0; i < blackOps.length; i++) { //========Loop through array of blackOps
+    if (army === "wP" && start === 1 && end === 3) { //======== White Pawns (move 2 squares)
+      return true
+    }  
+  if (army === "wP" && start + 1) { //======== White Pawns (move 1 square)
+    return true
+    }
+  if (army === "wP" && blackOps.includes(end) === CAPTURED) { //======== White Pawn Captures
+    return true
+      }
+    }  
+  }
 */
 
-//========== TIMER - START CLOCK BUTTON FOR SCREEN #3 =======//
-document.querySelector('.timer_StartBtn').addEventListener('click', event => {
-  document.querySelector('.timer_StartBtn') = START_INTERVAL()
-})
+
+
+
 
 
 
