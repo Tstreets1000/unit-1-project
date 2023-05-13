@@ -25,23 +25,31 @@ const exitGame = document.querySelector('#exit')
 const whiteArmy = document.querySelector('.whiteArmyBtn')
 const blackArmy = document.querySelector('.blackArmyBtn')
 
-
-
 /*==============================================*/
 /*============= EVENT LISTENERS ================*/
 /*==============================================*/
 
-document.getElementById('timer_Start').addEventListener('click', runTimer)
-
-document.getElementById('playAgain').addEventListener('click', init_Game)
+document.getElementById('playAgain').addEventListener('click', () => {
+  PLAY_AGAIN.addEventListener('click', function init_Game() {
+  })
+  init_Game()
+})
 
 /*------------ TEAM SELECT BUTTON ---------*/
+document.querySelector('.blackArmyBtn').addEventListener('click', () => {
+  document.querySelector('.blackArmyBtn').style.backgroundColor='FFFFFF' 
+  document.querySelector('.whiteArmyBtn').style.backgroundColor='000000'
+  whiteArmy.addEventListener('click', function init_Game() {
+  })
+    alert ('Player 1: Carthagian Army / Player 2: Roman Army') 
+})
+
 document.querySelector('.whiteArmyBtn').addEventListener('click', () => {
   document.querySelector('.whiteArmyBtn').style.backgroundColor='FFFFFF' 
   document.querySelector('.blackArmyBtn').style.backgroundColor='000000'
   whiteArmy.addEventListener('click', function init_Game() {
   })
-    alert ('Player 1: White Army / Player 2 Default Black Army') 
+    alert ('Player 1: Roman Army / Player 2: Carthagian Army') 
 })
 
 //----- CAROUSEL ENTER BUTTON FOR SCREEN #1 -----//
@@ -136,229 +144,229 @@ const UPDATE_PLAYER2_TIMER = () => {
  
 const WHITE_ARMY_PIECES = {
   wP: {
-      location: "A02",
-      type: "pawn",
-      color: "white",
-      piece: "&#9817;",    
+      "location": "A02",
+      "type": "pawn",
+      "color": "white",
+      "piece": "&#9817;",    
   },
 
   wP: {
-      location: "B02",
-      type: "pawn",
-      color: "white",
-      piece: "&#9817;", 
+      "location": "B02",
+      "type": "pawn",
+      "color": "white",
+      "piece": "&#9817;", 
   },
 
   wP: {
-      location: "C02",
-      type: "pawn",
-      color: "white",
-      piece: "&#9817;", 
+      "location": "C02",
+      "type": "pawn",
+      "color": "white",
+      "piece": "&#9817;", 
   },
 
   wP: {
-      location: "D02",
-      type: "pawn",
-      color: "white",
-      piece: "&#9817;", 
+      "location": "D02",
+      "type": "pawn",
+      "color": "white",
+      "piece": "&#9817;", 
   },
 
   wP: {
-      location: "E02",
-      type: "pawn",
-      color: "white",
-      piece: "&#9817;", 
+      "location": "E02",
+      "type": "pawn",
+      "color": "white",
+      "piece": "&#9817;", 
   },
 
   wP: {
-      location: "F02",
-      type: "pawn",
-      color: "white",
-      piece: "&#9817;", 
+      "location": "F02",
+      "type": "pawn",
+      "color": "white",
+      "piece": "&#9817;", 
   },
 
   wP: {
-      location: "G02",
-      type: "pawn",
-      color: "white",
-      piece: "&#9817;",
+      "location": "G02",
+      "type": "pawn",
+      "color": "white",
+      "piece": "&#9817;",
   },
 
   wP: {
-      location: "H02",
-      type: "pawn",
-      color: "white",
-      piece: "&#9817;",
+      "location": "H02",
+      "type": "pawn",
+      "color": "white",
+      "piece": "&#9817;",
   },
 
   wQ: {
-      location: "D01",
-      type: "queen",
-      color: "white",
-      piece: "&#9813;" 
+      "location": "D01",
+      "type": "queen",
+      "color": "white",
+      "piece": "&#9813;" 
   },
 
   wK: {
-      location: "E01",
-      type: "king",
-      color: "white",
-      piece: "&#9812;" 
+      "location": "E01",
+      "type": "king",
+      "color": "white",
+      "piece": "&#9812;" 
   },
 
   wB: {
-      column: "C01",
-      type: "bishop",
-      color: "white",
-      piece: "&#9815;" 
+      "column": "C01",
+      "type": "bishop",
+      "color": "white",
+      "piece": "&#9815;" 
   },
 
   wB: {
-      locaiton: "F01",
-      type: "bishop",
-      color: "white",
-      piece: "&#9815;" 
+      "locaiton": "F01",
+      "type": "bishop",
+      "color": "white",
+      "piece": "&#9815;" 
   },
 
   wN: {
-      location: "B01",
-      type: "knight",
-      color: "white",
-      piece: "&#9816;" 
+      "location": "B01",
+      "type": "knight",
+      "color": "white",
+      "piece": "&#9816;" 
   },
 
   wN: {
-      location: "G01",
-      type: "knight",
-      color: "white",
-      piece: "&#9816;" 
+      "location": "G01",
+      "type": "knight",
+      "color": "white",
+      "piece": "&#9816;" 
   },
 
   wR: {
-      location: "A01",
-      type: "rook",
-      color: "white",
-      piece: "&#9814;" 
+      "location": "A01",
+      "type": "rook",
+      "color": "white",
+      "piece": "&#9814;" 
   },
 
   wR: {
-      location: "H01",
-      type: "rook",
-      color: "white",
-      piece: "&#9814;" 
+      "location": "H01",
+      "type": "rook",
+      "color": "white",
+      "piece": "&#9814;" 
   }
 }  
 
 const BLACK_ARMY_PIECES = {
   bP: {
-      location: "A07",
-      type: "pawn",
-      color: "black",
-      piece: "&#9817;" 
+      "location": "A07",
+      "type": "pawn",
+      "color": "black",
+      "piece": "&#9817;" 
   },
 
   bP: {
-      location: "B07",
-      type: "pawn",
-      color: "black",
-      piece: "&#9817;"  
+      "location": "B07",
+      "type": "pawn",
+      "color": "black",
+      "piece": "&#9817;"  
   },  
   
   bP: {
-      location: "C07",
-      type: "pawn",
-      color: "black",
-      piece: "&#9817;"  
+      "location": "C07",
+      "type": "pawn",
+      "color": "black",
+      "piece": "&#9817;"  
   },
   
   bP: {
-      location: "D07",
-      type: "pawn",
-      color: "black",
-      piece: "&#9817;"  
+      "location": "D07",
+      "type": "pawn",
+      "color": "black",
+      "piece": "&#9817;"  
   },
   
   bP: {
-      location: "E07",
-      type: "pawn",
-      color: "black",
-      piece: "&#9817;"  
+      "location": "E07",
+      "type": "pawn",
+      "color": "black",
+      "piece": "&#9817;"  
   },
   
   bP: {
-      location: "F07",
-      type: "pawn",
-      color: "black",
-      piece: "&#9817;"  
+      "location": "F07",
+      "type": "pawn",
+      "color": "black",
+      "piece": "&#9817;"  
   },
   
   bP: {
-      location: "G07",
-      type: "pawn",
-      color: "black",
-      piece: "&#9817;"  
+      "location": "G07",
+      "type": "pawn",
+      "color": "black",
+      "piece": "&#9817;"  
   },
   
   bP: {
-      location: "H07",
-      type: "pawn",
-      color: "black",
-      piece: "&#9817;"  
+      "location": "H07",
+      "type": "pawn",
+      "color": "black",
+      "piece": "&#9817;"  
   },
   
   bQ: {
-      location: "D08",
-      type: "queen",
-      color: "black",
-      piece: "&#9813;" 
+      "location": "D08",
+      "type": "queen",
+      "color": "black",
+      "piece": "&#9813;" 
   },
   
   bK: {
-      location: "E08",
-      type: "king",
-      color: "black",
-      piece: "&#9812;" 
+      "location": "E08",
+      "type": "king",
+      "color": "black",
+      "piece": "&#9812;" 
   },
   
   bB: {
-      location: "C08",
-      type: "bishop",
-      color: "black",
-      piece: "&#9815;" 
+      "location": "C08",
+      "type": "bishop",
+      "color": "black",
+      "piece": "&#9815;" 
   },
   
   bB: {
-      location: "F08",
-      type: "bishop",
-      color: "black",
-      piece: "&#9815;" 
+      "location": "F08",
+      "type": "bishop",
+      "color": "black",
+      "piece": "&#9815;" 
   },
   
   bN: {
-      location: "B08",
-      type: "knight",
-      color: "black",
-      piece: "&#9816;" 
+      "location": "B08",
+      "type": "knight",
+      "color": "black",
+      "piece": "&#9816;" 
   },  
   
   bN: {
-      locaiton: "G08",
-      type: "knight",
-      color: "black",
-      piece: "&#9816;" 
+      "locaiton": "G08",
+      "type": "knight",
+      "color": "black",
+      "piece": "&#9816;" 
   },
   
   bR: {
-      location: "A08",
-      type: "rook",
-      color: "black",
-      piece: "&#9814;" 
+      "location": "A08",
+      "type": "rook",
+      "color": "black",
+      "piece": "&#9814;" 
   },
   
   bR: {
-      location: "H08",
-      type: "rook",
-      color: "black",
-      piece: "&#9814;" 
+      "location": "H08",
+      "type": "rook",
+      "color": "black",
+      "piece": "&#9814;" 
   }
 }
 
@@ -424,45 +432,34 @@ function render() {
 
 //----PIECES MOVING TO SQAURES WHEN CLICKED ---//
 let state = false //false if no piece has been selected
-let currentPiece
-let currentCell
+let currentPiece = []
+let currentCell = []
 
 let cells = document.querySelectorAll('.square')
-console.log(cells)
   
-for (let i = 0; i < cells.length; i++) { 
-    cells[i].addEventListener('click', (event) => {
-console.log(event.target)
-
-if (state === !winner) {
   
-  for (let i = 0; i < cells.length; i++) {
-    cells[i].addEventListener('click', (event) => {
-      cells[i] = currentPiece
-      console.log(currentPiece)
-    })
-  }
-  currentPiece.addEventListener('click', (event) => {
+for (let i = 0; i < cells.length; i++) {
+  cells[i].addEventListener('click', (event) => {
+    console.log(event.target);
+  
+    if (state) {
+      // Handle the logic for selecting a cell and moving the piece
+      const selectedCell = event.target;
+      selectedCell.appendChild(currentPiece);
+      // Reset the state
+      state = false;
+        
+    } else {
+      // Handle the logic for selecting a piece
+      const selectedPiece = event.target;
+      currentPiece = selectedPiece;
+      currentCell = selectedPiece;
 
-  })
-  console.log(newCell)
-
-} 
-
-      
-  })
+      // Set the state
+      state = true;
+    }
+  });
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* function bP (start, end, army) { //============Black Pawns (move 2 aquares)
@@ -498,26 +495,6 @@ function wP (start, end, army) { //======== White Pawns (move 2 squares)
     }  
   }
 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*
 function allowDrop(ev) {
